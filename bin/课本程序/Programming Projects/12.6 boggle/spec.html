@@ -1,0 +1,257 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0078)http://www.cs.washington.edu/education/courses/cse143/04su/projects/p7/p7.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>UW CSE143 Assignment</title>
+  <link rel="stylesheet" type="text/css" href="./spec_files/project_style.css">
+<style type="text/css"></style></head>
+<body>
+<div class="header">
+<table class="container" border="0" cellpadding="0" cellspacing="0">
+  <tbody>
+    <tr>
+      <td style="vertical-align: baseline; text-align: left;"> <span class="assignment"><span class="dropcap">A</span>ssignment 7: Mix 'n
+Match Boggle</span> </td>
+      <td style="vertical-align: baseline; text-align: right;"> <span class="due">Due August <strike>4</strike> <font color="#990000">5</font>
+at 9:00pm and August <strike>11</strike> <font color="#990000">12</font>
+at 9:00 </span> </td>
+    </tr>
+  </tbody>
+</table>
+<hr style="position: relative; top: -13px;">
+</div>
+<div class="content">
+<p>In this final assignment we combine our knowledge of files,
+collections,
+graphics, and everything else to create modules making up a fun word
+game...</p>
+<h3><a href="http://www.cs.washington.edu/education/courses/cse143/04su/projects/p7/resources">All files</a><br>
+</h3>
+<p><span style="font-weight: bold;"></span></p>
+  <h2>Boggle </h2>
+  <h2><a href="http://www.cs.washington.edu/education/courses/cse143/04su/projects/p7/turnin.html">Turn in here</a><br>
+  </h2>
+Boggle is a word game a bit like Scrabble.&nbsp; Given a set of
+letters, players find valid words among them.&nbsp; In our version,
+only one
+person at a time plays the game, racing against the clock to score as
+many points as possible.&nbsp; Longer words earn more points than
+shorter words.&nbsp; The letters come from a grid, and the
+words have to be spelled by letters that are adjacent on the
+grid.&nbsp; Consecutive letters can be adjacent horizontally,
+vertically, or diagonally.&nbsp; A letter square can <b><font color="#990000">not</font></b> be used <strike>in more
+than one</strike> <font color="#cc6600">more than once</font> in a
+word.&nbsp; Full
+rules for the commerical Parker Brothers game, along with
+illustrations, can be found on a <a href="http://www.centralconnector.com/GAMES/boggle.html">Boggle web
+site</a>.&nbsp;&nbsp; <br>
+<br>
+Some of the&nbsp; rules&nbsp; would be quite
+difficult to implement (like the one allowing plurals of nouns), but
+your game should do as good a job as is practical at sticking to the
+rules as described.&nbsp; However, you don't need to attempt any part
+of the
+game that involves multiple players.<br>
+<br>
+The design of the game program has been divided into three parts or
+"modules", a Model, and View, and a Controller.&nbsp; Each team of
+students will implement one or more versions of each of the
+modules.&nbsp; For added zest, a full game can be formed by mixing and
+matching modules from different teams!&nbsp; Mostly this will happen in
+the second week of the project, but the design has to be carefully
+followed from the start to make it possible.&nbsp; There will be some
+limitations on what you can do and how your classes are packaged to
+make the Mix 'n Match possible.&nbsp; <br>
+<h3>Your Task</h3>
+Implement versions of each of the game modules.&nbsp; Each module is
+defined by a particular Java interface.<br>
+<br>
+Implementations can be "shallow" or "deep".&nbsp; A shallow
+implementation is somewhat better than a mere stub.&nbsp; The methods
+in it return
+reasonable values so that other modules can be tested with it, but
+don't have to be fully functional or elaborate.&nbsp; A "deep"
+implementation is a full, working version which may be quite
+elaborate.&nbsp; During the first week you should implement shallow
+versions of any two of the modules, and a deep version of the third
+module.&nbsp; During the second week you should implement deep versions
+of all modules, and will be able to revise your original deep module,
+too.<br>
+<br>
+The final application should have View with a graphical user interface
+in a
+frame.&nbsp; The grid will show the letters available to form
+words.&nbsp; The frame will show the game status information, such as
+whether a game is currently in progress, how much time remains, the
+score, etc.&nbsp; Information about the modules (authors, etc.) will be
+available.<br>
+<br>
+Here are brief descriptions of the modules.&nbsp; More information can
+be found by browsing the Java interfaces.&nbsp; Also, as the project
+progresses, you will gradually see better how the pieces have to fit
+together.<br>
+<br>
+<span style="font-weight: bold;">Controller</span> <font color="#990000">(BoggleController.java, located in package
+boggle.controller, implements mvc143.IBoggleController)</font>: The
+Controller
+handles primary interaction with the system and the user.&nbsp; The
+main method is part of the Controller.&nbsp; The Controller has
+references to the other modules.&nbsp; It may get information from the
+playerr (user) and pass it to the appropriate module.&nbsp; When the
+program
+starts, the Controller is in overall control of the session.&nbsp; A
+user can play as many games as desired without restarting the
+application.&nbsp; For each game, the Controller sets things in
+motion.&nbsp; This includes tasks such as reinitializing the score,
+making sure the game grid is renewed, starting a timer, etc.&nbsp; When
+the time runs out, the Controller ends that game, but the session
+remains active in case the user wants to play again.<br>
+<br>
+<span style="font-weight: bold;">Model </span><font color="#990000">(BoggleModel.java,
+located in package boggle.model, implements mvc143.IBoggleModel and
+mvc143.IBoggleWordsModel)</font>: The Model contains the
+data which makes up the game.&nbsp; For&nbsp; example, the Model knows
+what letters are on the grid and where.&nbsp; It can tell if a proposed
+string is valid or invalid.&nbsp; Normally, the Model should do this
+with reference to a "dictionary".&nbsp; The dictionary is a file or
+other source of valid words.&nbsp;&nbsp;&nbsp; The Model also knows how
+to assign a score to each word, based on various rules it knows.&nbsp;
+Finally, the Model knows what the score of the game is at any given
+time.<br>
+<br>
+<span style="font-weight: bold;">View</span><font color="#990000">
+(BoggleView.java located in package boggle.view, implements
+mvc143.IBoggleView)</font>: The View is responsible
+for displaying the game to the user.&nbsp;&nbsp; For example, it
+determines how the grid should look (color, size, placement,
+etc).&nbsp; It
+paints the letters on the grid but
+does not determine what those letters should be.&nbsp; The View gets
+information about the game from the Model <font color="#990000">via
+the Controller</font>.&nbsp; The View might also
+interact with the Controller when user interaction is required.&nbsp;
+(In many applications, it is difficult to make a clean separation
+between the View and the Controller.&nbsp; For Boggle, the interfaces
+generally define which module is responsible for different aspects of
+the game).<br>
+<br>
+<font color="#990000"><b>Module packaging</b>: To enable Mix and Match,
+each module must squeezed into its own, single .java file.&nbsp; For
+example, a deep View would include at least a BoggleView class
+implementing IBoggleView, plus GUI components overriding JPanel or
+other Swing components.&nbsp; <i>All </i>of the classes making up the
+view must be included in the BoggleView.java.&nbsp; If you put your
+classes in separate files, as has been our practice (and which is
+ordinarily good practice!), the MixMatch tool will not be able to load
+them. [As you probably remember, but may not have had to use before,
+you can put as many classes as you wish in a single .java file.&nbsp;
+They can either be end-to-end, or can be nested, according to the
+design.&nbsp; However, only <i>one </i>can be marked "public".]<br>
+</font><br>
+<h3>Supplied files</h3>
+There are <strike>three</strike> <font color="#990000">four </font>major
+interfaces that must be implemented, <font color="#990000">two for the
+Model</font> and one each for
+the <strike>Model,</strike> View, and Controller.&nbsp; There will
+other classes and
+interfaces available eventually, mostly as examples or suggestions for
+implementation.&nbsp; Some data files (like word lists) may be posted,
+too.<br>
+<br>
+You will notice that the files, including some that you have to create,
+are spread out over at least four packages.&nbsp; It will be quite
+important to have each file in the proper package, as the Mix and Match
+tool depends on that.<br>
+<br>
+<h3><span style="font-weight: bold;"></span><b>Written reports</b></h3>
+In addition to the programs, please prepare these materials:<br>
+1. A written report along the usual lines, prepared by you and your
+partner together.<br>
+2. A diagram showing the relationships of all the <strike>classes </strike><font color="#990000">types (classes and interfaces)</font> used in the
+project (whether your own code <font color="#990000">or</font>
+supplied code, but NOT libraries this
+time)<br>
+3. A description of how your game differs (in the rules, etc, not in
+how it looks) from the official version.<br>
+4. Screen snapshots (specified later)<br>
+5. A confidential, printed report, one per person, which describes the
+extent and nature of your own contributions to the project (second week
+only).<br>
+<br>
+<h3>Getting Started</h3>
+1. Think of a short nickname for your
+team.&nbsp; This will be necessary for other teams to identify the
+authors of the classes they are working with.<br>
+2. Look at the Boggle web site.&nbsp; Play a couple of practice games
+with your partner.&nbsp; You don't need elaborate equipment for
+this.&nbsp; Just draw a square with letters on it.<br>
+3. Browse through all of the supplied code.<br>
+4. Write absolutely minimal stubs for all the modules.&nbsp; This will
+help you
+see how the parts should fit together.&nbsp; Once everything is
+compiling and executing, expand a few of the stub methods slightly to
+try to get something that feels like a game, even if much of it is
+missing.&nbsp; For example, the initial view doesn't have to be
+graphical.&nbsp; You could print all the information on the
+console!&nbsp; The model might accept all words as valid, and might
+keep the score at 0.&nbsp;&nbsp; Perhaps initially, all the letters on
+the grid would be the same, etc.<br>
+5. Once you have reasonable shallow implementations for all the
+modules, pick one to concentrate on for the first deep implementation.<br>
+<br>
+<h3>Second week activities and beyond</h3>
+After the first turn-in has past,&nbsp; all of the modules will be
+posted and available for mix and match testing with each another.&nbsp;
+There will be a special tool to facilitate this (one of the reasons why
+the set-up is complicated, and why we are keeping our fingers crossed
+that nothing goes wrong).<br>
+<br>
+After the second turn in, each team will meet with a TA to demonstrate
+the game in person.&nbsp; This demo will contribute heavily to the
+project grading.&nbsp; There will be a sign-up for demo
+appointments.&nbsp; Both partners must show up, on time, or the project
+will not be graded.&nbsp; At the demo, each team will show its three
+components running together, and will also have to show that any one of
+their modules can run well with modules from any other teams.&nbsp;
+More later about these appointments and how to prepare for them.<br>
+<p>Turn in (by 8/5 at 9:00pm, one per team):<br>
+</p>
+<ul>
+  <li>Shallow versions of two modules, and a deep version of the
+third.&nbsp; The turn-in form will have separate areas to facilitate
+this.<br>
+  </li>
+  <li>A short written report (not a full final report), stating
+mainly what modules are being turned in, and giving any instructions
+needed for running or interpreting the program.&nbsp; State briefly
+how what is turned in now differs from what you plan to complete by the
+end of the program.<br>
+  </li>
+</ul>
+<p>Turn in (by 8/12 at 9:00pm, one per team):<br>
+</p>
+<ul>
+  <li>Deep versions of all three modules (including the one which you
+turned in as deep the week before -- it is fine to make a revised
+version of it).&nbsp; <br>
+  </li>
+  <li>Turn in any paperwork (written reports, screen snapshots,
+etc.)
+in class on the day following the electronic turn-in.&nbsp; Include
+three screen snapshots.&nbsp; One should show your program (all three
+of your own modules) just after the program starts, before a game is in
+program.&nbsp; One should show your program with a game in progress, at
+a point where at least one word has been correctly selected. &nbsp; One
+should show the same situation as just mentioned, but this time with
+someone else's view (your Controller and Model).&nbsp; Make sure
+your names are on each piece of paper and staple everything together
+(except the individual reports, which should be handled separately and
+folded for confidentiality).</li>
+</ul>
+<br>
+</div>
+<div class="footer">
+<hr><span class="class">CSE143 Summer 2004</span>
+</div>
+
+
+</body></html>

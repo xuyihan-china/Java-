@@ -1,0 +1,52 @@
+a
+S
+View
+v
+out1.txt
+C
+madlib2.txt
+story2.txt
+Barack Obama
+sleepy
+Timbuktu
+lazy
+fat
+spleens
+bazookas
+Star Wars action figures
+toilets
+pink
+greasy
+itchy
+laptops
+crappy
+create
+make new mad-lib
+c
+MAD_LIB_3.txt
+mad_lib3.txt
+madlib3.txt
+result3.txt
+75
+moist
+David Hasselhoff
+resentment
+kneecap
+socks
+exhausted
+Moscow
+Scientologists
+droopy
+excited
+99999
+Barney the dinosaur
+the Chipotle men's room
+CEO
+elastic
+CHID
+V
+story2.txt
+v
+results_3.txt
+result3.txt
+q

@@ -1,0 +1,30 @@
+Welcome to the game of Mad Libs.
+I will ask you to provide various words
+and phrases to fill in a story.
+The result will be written to an output file.
+
+(C)reate mad-lib, (V)iew mad-lib, (Q)uit? c
+Input file name: madlib3.txt
+Output file name: out3.txt
+
+Please type an age: 75
+Please type an adjective: moist
+Please type an actor or actress: David Hasselhoff
+Please type an emotion: resentment
+Please type a body part: kneecap
+Please type an articles of clothing: socks
+Please type an adjective: exhausted
+Please type a city: Moscow
+Please type a religious group: Scientologists
+Please type an adjective: droopy
+Please type an emotion: excited
+Please type a number: 99999
+Please type a person's name: Barney the dinosaur
+Please type a place: the Chipotle men's room
+Please type a job title: CEO
+Please type an adjective: elastic
+Please type an area of study: CHID
+Your mad-lib has been created!
+
+(C)reate mad-lib, (V)iew mad-lib, (Q)uit? q
+

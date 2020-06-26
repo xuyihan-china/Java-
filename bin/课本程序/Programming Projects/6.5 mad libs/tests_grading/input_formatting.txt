@@ -1,0 +1,25 @@
+c
+oops.txt
+mabldib1.txt
+format-in.txt
+format-out.txt
+silly
+apples
+frisbee
+hungry
+Tacoma, WA
+bees
+umbrella
+burp
+shiny
+jelly donut
+beautiful
+spoons
+Keanu Reeves
+X
+what?
+v
+OUT0001.txt
+i_forget
+format-out.txt
+q

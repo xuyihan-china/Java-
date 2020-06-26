@@ -1,0 +1,22 @@
+Welcome to the game of Mad Libs.
+I will ask you to provide various words
+and phrases to fill in a story.
+The result will be written to an output file.
+
+(C)reate mad-lib, (V)iew mad-lib, (Q)uit? c
+Input file name: madlib0.txt
+Output file name: output0.txt
+
+Please type a job: ballerina
+Please type an adjective: smelly
+Your mad-lib has been created!
+
+(C)reate mad-lib, (V)iew mad-lib, (Q)uit? v
+Input file name: output0.txt
+
+I wannabe a ballerina when I grow up. 
+Just like my dad. 
+Life is smelly like that! 
+
+(C)reate mad-lib, (V)iew mad-lib, (Q)uit? q
+

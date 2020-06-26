@@ -1,0 +1,8 @@
+c
+madlib0.txt
+output0.txt
+ballerina
+smelly
+v
+output0.txt
+q

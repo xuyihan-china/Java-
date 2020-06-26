@@ -1,0 +1,24 @@
+bogus protein
+CCATt-AATgATCa-CAGTt
+michael jordan mad hops protein
+ATgAG-ATC-CgtgatGTGgg-aT-CCTa-CT-CATTaa
+paris hilton phony protein
+AtgC-CaacaTGGATGCCCTAAG-ATAtgGATTagtgA
+jimi hendrix guitar talent protein
+atgataattagttttaatatcaga-ctgtaa
+admiral grace murray hopper protein
+ATGC-AATT--GC-----TCGA--------TTAG
+Nyan Cat protein
+CAT-CAT-CAT-CAT-CAT-CAT-CAT-CAT-CAT-CAT
+Dash protein 1
+ATG----CC-AA-CATGg--ATGCC---cGATCGCGCGCG-CG-C-C--GCGCGA--tCGG-ATTgA
+Dash protein 2
+A-T--G-CCA-AC-ATGg-A-TGC-CcGA-TAt-GGCCCA-TT-G---A
+-Dash-non-protein-too-little-CG-
+ATG---CCA-AC--ATG---g-A-T-GC-C-------cGA-TAt-G--GA-TT---gA
+-Dash-non-protein-bad-start-codon-
+-A-C--ATG-TG--CCA-ACATG-g-A-T-GCCC-C--cGA-TAtG-GA-TTGA
+Dash-non-protein-bad-end-codon-
+ATGCCA-AC-ATGg-A-TGC-CcGA-TAt-GGA-TTTGA-G-G-
+Dash-non-protein-not-long-enough
+ATG------CCCGGG------TGA

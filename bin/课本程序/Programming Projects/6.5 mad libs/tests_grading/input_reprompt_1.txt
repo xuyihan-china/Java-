@@ -1,0 +1,22 @@
+c
+oops.txt
+mabldib1.txt
+bogus
+not_found
+bad-file-name-here-uh-oh.txt
+madlib1.txt
+out1.txt
+silly
+apples
+frisbee
+hungry
+Tacoma, WA
+bees
+umbrella
+burp
+shiny
+jelly donut
+beautiful
+spoons
+Keanu Reeves
+q

@@ -1,0 +1,26 @@
+under 50% C/G no protein
+ATGATAATTAGTTTTACTGTCAGACTGTAA
+under 50% C/G no protein 2
+ATGATCATTAGTTTTAACGCCAGCCTGTAA
+under 50% C/G no protein 3
+ATGATGATTAGTGGGACTCTGCGGGTGTAA
+over 50% C/G yes protein 1
+ATGATCATTAGTGGTCCGGCCCGCCTGTAA
+over 50% C/G yes protein 2
+ATGATCATTACGGGGACGCTCGCCCCCTAA
+over 50% C/G yes protein 3
+ATGGGGGCTGGGTGCCTTATGCCGGCGTAA
+Under min length of 6, no protein
+ATGCCCGGGTGA
+Under min length of 6, no protein 2
+ATGCCCGGGTGG
+Under min length of 6, no protein 3
+ATGCCCATCGGGGACTGA
+Min length of 6, yes protein
+ATGCCCATCGGGGACTGATGA
+Over min length of 6, yes protein
+ATGCCCATCGGGGACGGTTGATGA
+Over min length of 6, no protein
+ATGCCCATCGGGGACGGTTGATGG
+Over min length of 6, no protein 2
+ATGCCCATTTTTTAAAATTAATGG

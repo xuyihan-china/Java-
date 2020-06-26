@@ -1,0 +1,33 @@
+x
+y
+z
+huh?
+test with many words
+oops foo bar baz 12345
+View
+vIeW-mad-lib
+V
+out0.txt
+Create
+C
+madlib0.txt
+menu_out_0.txt
+woookie
+chewie
+?
+C
+madlib0_b.txt
+menu_out_0_b.txt
+chocolate
+soy
+lactose-intolerance
+view
+menu_out_0.txt
+V
+menu_out_0_b.txt
+VV
+       cV
+out2.txt
+Quit
+  qQ
+Q

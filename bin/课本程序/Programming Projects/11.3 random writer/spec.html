@@ -1,0 +1,128 @@
+<HTML>
+
+<HEAD>
+<TITLE>Random Writer</TITLE>
+<META NAME="keywords" value="nifty assignments, random writer, CS 2, SIGCSE">
+<META NAME="description" value="Random Writer nifty assignment from
+SIGCSE 2003">
+</HEAD>
+
+<BODY>
+
+<CENTER>
+<H2 style="color:red">Random Writer</H2>
+<H4 style="color:red">Joe Zachary<BR>School of Computing<BR>University
+of Utah<BR>February 19, 2003</H4>
+</CENTER>
+
+<P>
+
+This nifty assignment is based on an idea advanced by Claude Shannon
+in 1948 <a href="#shannon">[3]</a> and subsequently popularized by
+A.K. Dewdney in his column in Scientific American in 1990 <a
+href="#dewdney">[1]</a>.
+
+<P>
+
+<UL>
+
+<LI> You can learn about the Random Writer assignment by reading this
+<a href="handout.html">example handout<a>.
+
+<P>
+
+<LI> Here are the <a href="RandomWriter.ppt">powerpoint slides</a>
+that I presented at SIGCSE, and here is an <a
+href="RandomWriter.html">HTML version of the slides</a>.
+
+<P>
+
+<LI> If you download this <a href="RandomWriter.jar">executable jar
+file</a>, you can both run the Random Writer and extract the source
+files that it contains.  You can, for example, run the Random Writer
+on a seed length of 5, an output file length of 500, an input file
+called "sawyer.txt", and an output file called "result.txt" by issuing
+the command
+
+<PRE>
+java -jar RandomWriter.jar 5 500 sawyer.txt result.txt
+</PRE>
+
+from the command line.  You can extract the two source files with a
+zip utility or by issuing the command
+
+<PRE>
+jar -xf RandomWriter.jar RandomWriter.java CharGenerator.java
+</PRE>
+
+from the command line.
+
+</UL>
+
+<P>
+
+I have used this assignment with great success in my CS 2 classes.  The
+assignment is nifty for at least three reasons.
+
+<OL>
+
+<LI> When the problem is first presented to the students, it
+sounds extremely difficult.  However, when they understand the
+algorithm that I have in mind, they are impressed with how
+straightforward it is.
+
+<P>
+
+<LI> When the students complete the Random Writer they have a lot of
+fun playing with it.  I always run a contest to see who can generate
+the funniest output.
+
+<P>
+
+<LI> The Random Writer is not a toy program; it can process the text
+of entire books.
+
+</OL>
+
+<P>
+
+The assignment touches on file input/output, string searching, the use
+of a dynamic linear structure (such as Java ArrayLists), and the use
+of randomly-generated integers.  When assigned in Java, the students
+need to understand the portions of the Java API (java.lang.String,
+java.lang.StringBuffer, java.util.Random, java.util.ArrayList,
+java.io.FileReader, and java.io.FileWriter) that it exploits.  The
+assignment typically takes one week.
+
+<P>
+
+One of the students who completed the assignment the first time I gave
+it used the idea behind the Random Writer to devise a new technique
+for synthesizing texture patterns in computer graphics applications <a
+href="#efros">[2]</a>.  Rather than growing a text string one
+character at a time, he grows texture patterns one pixel at a time.
+
+<P>
+
+<CENTER>
+<H3 style="color:red">References</H3>
+</CENTER>
+
+<P>
+
+<a name="dewdney">[1] A.K. Dewdney.  A potpourri of programmed prose and
+prosody.  <i>Scientific American<i>, 122-TK, June 1989.
+
+<P>
+
+<a name="efros">[2] A.A. Efros and T.K. Leung.  Texture synthesis by
+non-parametric sampling.  <i>IEEE International Conference on
+Computer Vision<i>, September 1999.
+
+<P>
+
+<a name="shannon">[3] C.E. Shannon.  A mathematical theory of
+communication.  <i>Bell System Technical Journal</i>, 27, 1948.
+
+</BODY>
+</HTML>

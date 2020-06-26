@@ -1,0 +1,26 @@
+Welcome to the game of Mad Libs.
+I will ask you to provide various words
+and phrases to fill in a story.
+The result will be written to an output file.
+
+(C)reate mad-lib, (V)iew mad-lib, (Q)uit? c
+Input file name: madlib1.txt
+Output file name: out1.txt
+
+Please type an adjective: silly
+Please type a plural noun: apples
+Please type a noun: frisbee
+Please type an adjective: hungry
+Please type a place: Tacoma, WA
+Please type a plural noun: bees
+Please type a noun: umbrella
+Please type a funny noise: burp
+Please type an adjective: shiny
+Please type a noun: jelly donut
+Please type an adjective: beautiful
+Please type a plural noun: spoons
+Please type a person's name: Keanu Reeves
+Your mad-lib has been created!
+
+(C)reate mad-lib, (V)iew mad-lib, (Q)uit? q
+

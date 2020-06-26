@@ -1,0 +1,12 @@
+Psst.  Hey, you!  Do you want some extra credit?  Better read this:
+
+http://www.cs.washington.edu/education/courses/cse143/09wi/homework/8/spec-bonus.pdf
+
+Here are some required files you might need:
+
+http://www.cs.washington.edu/education/courses/cse143/09wi/homework/8/HuffMain.java
+http://www.cs.washington.edu/education/courses/cse143/09wi/homework/8/HuffMain2.java
+http://www.cs.washington.edu/education/courses/cse143/09wi/homework/8/BitInputStream.java
+http://www.cs.washington.edu/education/courses/cse143/09wi/homework/8/BitOutputStream.java
+
+Good luck, super sleuth!

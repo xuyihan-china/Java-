@@ -1,0 +1,22 @@
+c
+oops.txt
+bad file name here with lots of words
+mabldib0.txt
+foo bar baz madlib0.txt
+madlib0.txt foo bar baz
+madlib0.txt
+reprompt_3.txt
+clown
+purple
+v
+OUT0001.txt
+i_forget
+reprompt_3.txt
+v
+bad file name here with lots of words
+reprompt_3.txt please
+please use reprompt_3.txt
+what? huh?
+i don't know.
+reprompt_3.txt
+q

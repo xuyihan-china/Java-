@@ -1,0 +1,1858 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 9">
+<meta name=Originator content="Microsoft Word 9">
+<link rel=File-List href="./02-linkedlist_files/filelist.xml">
+<title>University of Washington</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>DONALD CHINN</o:Author>
+  <o:LastAuthor>stepp</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>288</o:TotalTime>
+  <o:LastPrinted>2001-10-03T05:36:00Z</o:LastPrinted>
+  <o:Created>2005-01-25T19:00:00Z</o:Created>
+  <o:LastSaved>2005-01-25T19:00:00Z</o:LastSaved>
+  <o:Pages>5</o:Pages>
+  <o:Words>2016</o:Words>
+  <o:Characters>11496</o:Characters>
+  <o:Company> </o:Company>
+  <o:Lines>95</o:Lines>
+  <o:Paragraphs>22</o:Paragraphs>
+  <o:CharactersWithSpaces>14117</o:CharactersWithSpaces>
+  <o:Version>9.2720</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+  <w:DisplayVerticalDrawingGridEvery>0</w:DisplayVerticalDrawingGridEvery>
+  <w:UseMarginsForDrawingGridOrigin/>
+  <w:Compatibility>
+   <w:FootnoteLayoutLikeWW8/>
+   <w:ShapeLayoutLikeWW8/>
+   <w:AlignTablesRowByRow/>
+   <w:ForgetLastTabAlignment/>
+   <w:LayoutRawTableWidth/>
+   <w:LayoutTableRowsApart/>
+  </w:Compatibility>
+ </w:WordDocument>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+@font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+ /* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+h1
+	{mso-style-next:Normal;
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-font-kerning:0pt;}
+h3
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:3;
+	mso-hyphenate:none;
+	font-size:13.0pt;
+	font-family:Arial;
+	mso-fareast-language:AR-SA;}
+h4
+	{mso-style-next:Normal;
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-indent:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:4;
+	mso-list:l0 level4 lfo35;
+	mso-hyphenate:none;
+	tab-stops:list 0in left .75in 1.0in 135.0pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-language:AR-SA;}
+p.MsoFootnoteText, li.MsoFootnoteText, div.MsoFootnoteText
+	{margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	tab-stops:center 3.0in right 6.0in;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	tab-stops:center 3.0in right 6.0in;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+span.MsoFootnoteReference
+	{vertical-align:super;}
+p.MsoList, li.MsoList, div.MsoList
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.25in;
+	margin-bottom:.0001pt;
+	text-indent:-.25in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoTitle, li.MsoTitle, div.MsoTitle
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-align:center;
+	mso-pagination:widow-orphan;
+	mso-outline-level:1;
+	font-size:16.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:14.0pt;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoBodyTextIndent, li.MsoBodyTextIndent, div.MsoBodyTextIndent
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.25in;
+	margin-bottom:.0001pt;
+	text-indent:.25in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoListContinue, li.MsoListContinue, div.MsoListContinue
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:.25in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoSubtitle, li.MsoSubtitle, div.MsoSubtitle
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-align:center;
+	mso-pagination:widow-orphan;
+	mso-outline-level:2;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+p.MsoDate, li.MsoDate, div.MsoDate
+	{mso-style-next:Normal;
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoBodyText2, li.MsoBodyText2, div.MsoBodyText2
+	{margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:.5in .5in .5in .5in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-footer:url("./02-linkedlist_files/header.htm") f1;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+@list l0
+	{mso-list-id:10;
+	mso-list-template-ids:10;}
+@list l0:level1
+	{mso-level-number-format:none;
+	mso-level-text:"";
+	mso-level-tab-stop:0in;
+	mso-level-number-position:left;
+	margin-left:0in;
+	text-indent:0in;}
+@list l0:level2
+	{mso-level-number-format:none;
+	mso-level-text:"";
+	mso-level-tab-stop:0in;
+	mso-level-number-position:left;
+	margin-left:0in;
+	text-indent:0in;}
+@list l0:level3
+	{mso-level-number-format:none;
+	mso-level-text:"";
+	mso-level-tab-stop:0in;
+	mso-level-number-position:left;
+	margin-left:0in;
+	text-indent:0in;}
+@list l0:level4
+	{mso-level-number-format:none;
+	mso-level-style-link:"Heading 4";
+	mso-level-text:"";
+	mso-level-tab-stop:0in;
+	mso-level-number-position:left;
+	margin-left:0in;
+	text-indent:0in;}
+@list l0:level5
+	{mso-level-number-format:none;
+	mso-level-text:"";
+	mso-level-tab-stop:0in;
+	mso-level-number-position:left;
+	margin-left:0in;
+	text-indent:0in;}
+@list l0:level6
+	{mso-level-number-format:none;
+	mso-level-text:"";
+	mso-level-tab-stop:0in;
+	mso-level-number-position:left;
+	margin-left:0in;
+	text-indent:0in;}
+@list l0:level7
+	{mso-level-number-format:none;
+	mso-level-text:"";
+	mso-level-tab-stop:0in;
+	mso-level-number-position:left;
+	margin-left:0in;
+	text-indent:0in;}
+@list l0:level8
+	{mso-level-number-format:none;
+	mso-level-text:"";
+	mso-level-tab-stop:0in;
+	mso-level-number-position:left;
+	margin-left:0in;
+	text-indent:0in;}
+@list l0:level9
+	{mso-level-number-format:none;
+	mso-level-text:"";
+	mso-level-tab-stop:0in;
+	mso-level-number-position:left;
+	margin-left:0in;
+	text-indent:0in;}
+@list l1
+	{mso-list-id:40402164;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-572875712 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l1:level1
+	{mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2
+	{mso-list-id:62796105;
+	mso-list-template-ids:1193819874;}
+@list l2:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l2:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:.75in;
+	mso-level-number-position:left;
+	margin-left:.75in;
+	text-indent:-.25in;}
+@list l2:level3
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:1.25in;
+	mso-level-number-position:right;
+	margin-left:1.25in;
+	text-indent:-9.0pt;}
+@list l2:level4
+	{mso-level-tab-stop:1.75in;
+	mso-level-number-position:left;
+	margin-left:1.75in;
+	text-indent:-.25in;}
+@list l2:level5
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:2.25in;
+	mso-level-number-position:left;
+	margin-left:2.25in;
+	text-indent:-.25in;}
+@list l2:level6
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:2.75in;
+	mso-level-number-position:right;
+	margin-left:2.75in;
+	text-indent:-9.0pt;}
+@list l2:level7
+	{mso-level-tab-stop:3.25in;
+	mso-level-number-position:left;
+	margin-left:3.25in;
+	text-indent:-.25in;}
+@list l2:level8
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:3.75in;
+	mso-level-number-position:left;
+	margin-left:3.75in;
+	text-indent:-.25in;}
+@list l2:level9
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:4.25in;
+	mso-level-number-position:right;
+	margin-left:4.25in;
+	text-indent:-9.0pt;}
+@list l3
+	{mso-list-id:181018664;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1589213930 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l3:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l4
+	{mso-list-id:209271500;
+	mso-list-template-ids:-1706238504;}
+@list l4:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l4:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:.75in;
+	mso-level-number-position:left;
+	margin-left:.75in;
+	text-indent:-.25in;}
+@list l4:level3
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:1.25in;
+	mso-level-number-position:right;
+	margin-left:1.25in;
+	text-indent:-9.0pt;}
+@list l4:level4
+	{mso-level-tab-stop:1.75in;
+	mso-level-number-position:left;
+	margin-left:1.75in;
+	text-indent:-.25in;}
+@list l4:level5
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:2.25in;
+	mso-level-number-position:left;
+	margin-left:2.25in;
+	text-indent:-.25in;}
+@list l4:level6
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:2.75in;
+	mso-level-number-position:right;
+	margin-left:2.75in;
+	text-indent:-9.0pt;}
+@list l4:level7
+	{mso-level-tab-stop:3.25in;
+	mso-level-number-position:left;
+	margin-left:3.25in;
+	text-indent:-.25in;}
+@list l4:level8
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:3.75in;
+	mso-level-number-position:left;
+	margin-left:3.75in;
+	text-indent:-.25in;}
+@list l4:level9
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:4.25in;
+	mso-level-number-position:right;
+	margin-left:4.25in;
+	text-indent:-9.0pt;}
+@list l5
+	{mso-list-id:234631073;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-478517986 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l5:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l6
+	{mso-list-id:395401382;
+	mso-list-type:simple;
+	mso-list-template-ids:67698703;}
+@list l6:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l7
+	{mso-list-id:436608128;
+	mso-list-type:simple;
+	mso-list-template-ids:67698703;}
+@list l7:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l8
+	{mso-list-id:437530517;
+	mso-list-template-ids:-1589213930;}
+@list l8:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l8:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:.75in;
+	mso-level-number-position:left;
+	margin-left:.75in;
+	text-indent:-.25in;}
+@list l8:level3
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:1.25in;
+	mso-level-number-position:right;
+	margin-left:1.25in;
+	text-indent:-9.0pt;}
+@list l8:level4
+	{mso-level-tab-stop:1.75in;
+	mso-level-number-position:left;
+	margin-left:1.75in;
+	text-indent:-.25in;}
+@list l8:level5
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:2.25in;
+	mso-level-number-position:left;
+	margin-left:2.25in;
+	text-indent:-.25in;}
+@list l8:level6
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:2.75in;
+	mso-level-number-position:right;
+	margin-left:2.75in;
+	text-indent:-9.0pt;}
+@list l8:level7
+	{mso-level-tab-stop:3.25in;
+	mso-level-number-position:left;
+	margin-left:3.25in;
+	text-indent:-.25in;}
+@list l8:level8
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:3.75in;
+	mso-level-number-position:left;
+	margin-left:3.75in;
+	text-indent:-.25in;}
+@list l8:level9
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:4.25in;
+	mso-level-number-position:right;
+	margin-left:4.25in;
+	text-indent:-9.0pt;}
+@list l9
+	{mso-list-id:534000345;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-756110660 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l9:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l10
+	{mso-list-id:536743035;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-363813096 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l10:level1
+	{mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l11
+	{mso-list-id:550851210;
+	mso-list-type:simple;
+	mso-list-template-ids:67698703;}
+@list l11:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l12
+	{mso-list-id:581111442;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1538159900 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l12:level1
+	{mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l13
+	{mso-list-id:631863328;
+	mso-list-template-ids:-478517986;}
+@list l13:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l13:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:.75in;
+	mso-level-number-position:left;
+	margin-left:.75in;
+	text-indent:-.25in;}
+@list l13:level3
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:1.25in;
+	mso-level-number-position:right;
+	margin-left:1.25in;
+	text-indent:-9.0pt;}
+@list l13:level4
+	{mso-level-tab-stop:1.75in;
+	mso-level-number-position:left;
+	margin-left:1.75in;
+	text-indent:-.25in;}
+@list l13:level5
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:2.25in;
+	mso-level-number-position:left;
+	margin-left:2.25in;
+	text-indent:-.25in;}
+@list l13:level6
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:2.75in;
+	mso-level-number-position:right;
+	margin-left:2.75in;
+	text-indent:-9.0pt;}
+@list l13:level7
+	{mso-level-tab-stop:3.25in;
+	mso-level-number-position:left;
+	margin-left:3.25in;
+	text-indent:-.25in;}
+@list l13:level8
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:3.75in;
+	mso-level-number-position:left;
+	margin-left:3.75in;
+	text-indent:-.25in;}
+@list l13:level9
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:4.25in;
+	mso-level-number-position:right;
+	margin-left:4.25in;
+	text-indent:-9.0pt;}
+@list l14
+	{mso-list-id:640842577;
+	mso-list-type:hybrid;
+	mso-list-template-ids:817004494 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l14:level1
+	{mso-level-tab-stop:.75in;
+	mso-level-number-position:left;
+	margin-left:.75in;
+	text-indent:-.25in;}
+@list l15
+	{mso-list-id:690499022;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1328655892 67698713 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l15:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l16
+	{mso-list-id:722753448;
+	mso-list-template-ids:1069864666;}
+@list l16:level1
+	{mso-level-tab-stop:.75in;
+	mso-level-number-position:left;
+	margin-left:.75in;
+	text-indent:-.25in;}
+@list l16:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l16:level3
+	{mso-level-number-format:roman-lower;
+	mso-level-text:"%3\)";
+	mso-level-tab-stop:1.25in;
+	mso-level-number-position:left;
+	margin-left:1.25in;
+	text-indent:-.25in;}
+@list l16:level4
+	{mso-level-text:"\(%4\)";
+	mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	margin-left:1.5in;
+	text-indent:-.25in;}
+@list l16:level5
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"\(%5\)";
+	mso-level-tab-stop:1.75in;
+	mso-level-number-position:left;
+	margin-left:1.75in;
+	text-indent:-.25in;}
+@list l16:level6
+	{mso-level-number-format:roman-lower;
+	mso-level-text:"\(%6\)";
+	mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	margin-left:2.0in;
+	text-indent:-.25in;}
+@list l16:level7
+	{mso-level-tab-stop:2.25in;
+	mso-level-number-position:left;
+	margin-left:2.25in;
+	text-indent:-.25in;}
+@list l16:level8
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	margin-left:2.5in;
+	text-indent:-.25in;}
+@list l16:level9
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:2.75in;
+	mso-level-number-position:left;
+	margin-left:2.75in;
+	text-indent:-.25in;}
+@list l17
+	{mso-list-id:852766946;
+	mso-list-type:hybrid;
+	mso-list-template-ids:65939940 67698713 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l17:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l18
+	{mso-list-id:881599367;
+	mso-list-type:hybrid;
+	mso-list-template-ids:953062684 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l18:level1
+	{mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l19
+	{mso-list-id:984898272;
+	mso-list-type:hybrid;
+	mso-list-template-ids:479210026 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l19:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l20
+	{mso-list-id:1190753554;
+	mso-list-type:simple;
+	mso-list-template-ids:67698703;}
+@list l20:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l21
+	{mso-list-id:1203328200;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1561378260 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l21:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l22
+	{mso-list-id:1205942535;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-555451426 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l22:level1
+	{mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l23
+	{mso-list-id:1236551318;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1544328376 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l23:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l23:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";
+	mso-bidi-font-family:"Times New Roman";}
+@list l24
+	{mso-list-id:1281641082;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-573119084 536013368 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l24:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-weight:normal;}
+@list l25
+	{mso-list-id:1302468002;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-398717634 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l25:level1
+	{mso-level-start-at:9;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l26
+	{mso-list-id:1345470873;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1462632232 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l26:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l27
+	{mso-list-id:1462650831;
+	mso-list-template-ids:953062684;}
+@list l27:level1
+	{mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l27:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:.75in;
+	mso-level-number-position:left;
+	margin-left:.75in;
+	text-indent:-.25in;}
+@list l27:level3
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:1.25in;
+	mso-level-number-position:right;
+	margin-left:1.25in;
+	text-indent:-9.0pt;}
+@list l27:level4
+	{mso-level-tab-stop:1.75in;
+	mso-level-number-position:left;
+	margin-left:1.75in;
+	text-indent:-.25in;}
+@list l27:level5
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:2.25in;
+	mso-level-number-position:left;
+	margin-left:2.25in;
+	text-indent:-.25in;}
+@list l27:level6
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:2.75in;
+	mso-level-number-position:right;
+	margin-left:2.75in;
+	text-indent:-9.0pt;}
+@list l27:level7
+	{mso-level-tab-stop:3.25in;
+	mso-level-number-position:left;
+	margin-left:3.25in;
+	text-indent:-.25in;}
+@list l27:level8
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:3.75in;
+	mso-level-number-position:left;
+	margin-left:3.75in;
+	text-indent:-.25in;}
+@list l27:level9
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:4.25in;
+	mso-level-number-position:right;
+	margin-left:4.25in;
+	text-indent:-9.0pt;}
+@list l28
+	{mso-list-id:1499615612;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1892166278 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l28:level1
+	{mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l29
+	{mso-list-id:1499882046;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1462632232 67698703 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l29:level1
+	{mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l30
+	{mso-list-id:1505970819;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1962783630 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l30:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l31
+	{mso-list-id:1544974375;
+	mso-list-type:hybrid;
+	mso-list-template-ids:926999460 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l31:level1
+	{mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l32
+	{mso-list-id:1585803407;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-829277348 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l32:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l33
+	{mso-list-id:1699156601;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-810933966 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l33:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:1.25in;
+	mso-level-number-position:left;
+	margin-left:1.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l34
+	{mso-list-id:1747024289;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-705240428 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l34:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l35
+	{mso-list-id:1758480846;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1735060352 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l35:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l36
+	{mso-list-id:1878081663;
+	mso-list-template-ids:-829277348;}
+@list l36:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l36:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:.75in;
+	mso-level-number-position:left;
+	margin-left:.75in;
+	text-indent:-.25in;}
+@list l36:level3
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:1.25in;
+	mso-level-number-position:right;
+	margin-left:1.25in;
+	text-indent:-9.0pt;}
+@list l36:level4
+	{mso-level-tab-stop:1.75in;
+	mso-level-number-position:left;
+	margin-left:1.75in;
+	text-indent:-.25in;}
+@list l36:level5
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:2.25in;
+	mso-level-number-position:left;
+	margin-left:2.25in;
+	text-indent:-.25in;}
+@list l36:level6
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:2.75in;
+	mso-level-number-position:right;
+	margin-left:2.75in;
+	text-indent:-9.0pt;}
+@list l36:level7
+	{mso-level-tab-stop:3.25in;
+	mso-level-number-position:left;
+	margin-left:3.25in;
+	text-indent:-.25in;}
+@list l36:level8
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:3.75in;
+	mso-level-number-position:left;
+	margin-left:3.75in;
+	text-indent:-.25in;}
+@list l36:level9
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:4.25in;
+	mso-level-number-position:right;
+	margin-left:4.25in;
+	text-indent:-9.0pt;}
+@list l37
+	{mso-list-id:1945110921;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1193819874 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l37:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l38
+	{mso-list-id:1960066877;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1415687610 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l38:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l38:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:.75in;
+	mso-level-number-position:left;
+	margin-left:.75in;
+	text-indent:-.25in;}
+@list l39
+	{mso-list-id:2036030228;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1790655508 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l39:level1
+	{mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l40
+	{mso-list-id:2110076317;
+	mso-list-type:hybrid;
+	mso-list-template-ids:339752324 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l40:level1
+	{mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+<!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="2050"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=EN-US link=blue vlink=purple style='tab-interval:.5in'>
+
+<div class=Section1>
+
+<table border=0 cellspacing=0 cellpadding=0 style='border-collapse:collapse;
+ mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+ <tr>
+  <td width=445 valign=bottom style='width:333.7pt;padding:0in 5.4pt 0in 5.4pt'>
+  <h3>University of Washington, Tacoma<br>
+  TCSS 342, Winter 2005 (Stepp)<br>
+  Homework Assignment 02: Linked List Iterator</h3>
+  </td>
+  <td width=283 valign=bottom style='width:211.9pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><b><span style='mso-bidi-font-size:12.0pt'>Assigned: </span></b><span
+  style='mso-bidi-font-size:12.0pt'>Thursday, January 20<o:p></o:p></span></p>
+  <p class=MsoNormal><b>Due: </b>Wednesday, January 26, 11:59pm</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span style='mso-bidi-font-size:12.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='mso-bidi-font-size:12.0pt'>This programming
+assignment focuses on implementation and efficiency of linked lists and list
+iterators.<span style="mso-spacerun: yes">  </span>This is an individual
+assignment.<span style="mso-spacerun: yes">  </span>It should be turned in
+online through the course webpage e-submit system.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='mso-bidi-font-size:12.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<h3>Provided Files:</h3>
+
+<p class=MsoNormal><span style='mso-bidi-font-size:12.0pt'>For this program,
+you will be given an incomplete class </span><span style='mso-bidi-font-size:
+12.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman"'>AbstractLinkedList</span><span
+style='mso-bidi-font-size:12.0pt'>, in the file </span><span style='mso-bidi-font-size:
+12.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman"'>AbstractLinkedList.java</span><span
+style='mso-bidi-font-size:12.0pt'>; it is an implementation of a doubly-linked
+list with dummy header and tail.<span style="mso-spacerun: yes">  </span>This
+file, along with a testing class, can be downloaded from the course web
+page.<span style="mso-spacerun: yes">  </span>(You should perform your own
+testing and should not assume that the provided test file is exhaustive.)<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='mso-bidi-font-size:12.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='mso-bidi-font-size:12.0pt'>The following
+methods are already defined for you.<span style="mso-spacerun: yes"> 
+</span>Their behavior is similar to that described for the corresponding
+methods in the Java API for the </span><span style='mso-bidi-font-size:12.0pt;
+font-family:"Courier New";mso-bidi-font-family:"Times New Roman"'>List</span><span
+style='mso-bidi-font-size:12.0pt'> interface (which can be found at <a
+href="http://java.sun.com/j2se/1.4.2/docs/api/java/util/List.html">http://java.sun.com/j2se/1.4.2/docs/api/java/util/List.html</a>).<span
+style="mso-spacerun: yes">  </span>Some methods are abstract and have not been
+implemented.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='mso-bidi-font-size:12.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<table border=1 cellspacing=0 cellpadding=0 style='background:#DFDFDF;
+ mso-shading:windowtext;mso-pattern:gray-125 auto;border-collapse:collapse;
+ border:none;mso-border-alt:solid windowtext .5pt;mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+ <tr>
+  <td width=734 valign=top style='width:7.65in;border:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <ul style='margin-top:0in' type=disc>
+   <li class=MsoNormal style='mso-list:l23 level1 lfo36;tab-stops:list .5in'><span
+       style='mso-bidi-font-size:12.0pt;font-family:"Courier New";mso-bidi-font-family:
+       "Times New Roman"'>public AbstractLinkedList()<o:p></o:p></span></li>
+  </ul>
+  <p class=MsoNormal style='margin-left:.25in'><span style='mso-bidi-font-size:
+  12.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <ul style='margin-top:0in' type=disc>
+   <li class=MsoNormal style='mso-list:l23 level1 lfo36;tab-stops:list .5in'><span
+       style='mso-bidi-font-size:12.0pt;font-family:"Courier New";mso-bidi-font-family:
+       "Times New Roman"'>public void add(int index, Object element)<o:p></o:p></span></li>
+   <li class=MsoNormal style='mso-list:l23 level1 lfo36;tab-stops:list .5in'><span
+       style='mso-bidi-font-size:12.0pt;font-family:"Courier New";mso-bidi-font-family:
+       "Times New Roman"'>public void add(Object element)<o:p></o:p></span></li>
+  </ul>
+  <p class=MsoNormal style='margin-left:.25in'><span style='mso-bidi-font-size:
+  12.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <ul style='margin-top:0in' type=disc>
+   <li class=MsoNormal style='mso-list:l23 level1 lfo36;tab-stops:list .5in'><span
+       style='mso-bidi-font-size:12.0pt;font-family:"Courier New";mso-bidi-font-family:
+       "Times New Roman"'>public void remove(int index)<o:p></o:p></span></li>
+   <li class=MsoNormal style='mso-list:l23 level1 lfo36;tab-stops:list .5in'><span
+       style='mso-bidi-font-size:12.0pt;font-family:"Courier New";mso-bidi-font-family:
+       "Times New Roman"'>public boolean remove(Object element)<o:p></o:p></span></li>
+   <li class=MsoNormal style='mso-list:l23 level1 lfo36;tab-stops:list .5in'><span
+       style='mso-bidi-font-size:12.0pt;font-family:"Courier New";mso-bidi-font-family:
+       "Times New Roman"'>public void clear()<o:p></o:p></span></li>
+  </ul>
+  <p class=MsoNormal style='margin-left:.25in'><span style='mso-bidi-font-size:
+  12.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <ul style='margin-top:0in' type=disc>
+   <li class=MsoNormal style='mso-list:l23 level1 lfo36;tab-stops:list .5in'><span
+       style='mso-bidi-font-size:12.0pt;font-family:"Courier New";mso-bidi-font-family:
+       "Times New Roman"'>public boolean isEmpty()<o:p></o:p></span></li>
+   <li class=MsoNormal style='mso-list:l23 level1 lfo36;tab-stops:list .5in'><span
+       style='mso-bidi-font-size:12.0pt;font-family:"Courier New";mso-bidi-font-family:
+       "Times New Roman"'>public int size()<o:p></o:p></span></li>
+  </ul>
+  <p class=MsoNormal style='margin-left:.25in'><span style='mso-bidi-font-size:
+  12.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <ul style='margin-top:0in' type=disc>
+   <li class=MsoNormal style='mso-list:l23 level1 lfo36;tab-stops:list .5in'><span
+       style='mso-bidi-font-size:12.0pt;font-family:"Courier New";mso-bidi-font-family:
+       "Times New Roman"'>public Object get(int index)<o:p></o:p></span></li>
+   <li class=MsoNormal style='mso-list:l23 level1 lfo36;tab-stops:list .5in'><span
+       style='mso-bidi-font-size:12.0pt;font-family:"Courier New";mso-bidi-font-family:
+       "Times New Roman"'>public void set(int index, Object value)<o:p></o:p></span></li>
+  </ul>
+  <p class=MsoNormal style='margin-left:.25in'><span style='mso-bidi-font-size:
+  12.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <ul style='margin-top:0in' type=disc>
+   <li class=MsoNormal style='mso-list:l23 level1 lfo36;tab-stops:list .5in'><span
+       style='mso-bidi-font-size:12.0pt;font-family:"Courier New";mso-bidi-font-family:
+       "Times New Roman"'>public boolean contains(Object element)<o:p></o:p></span></li>
+   <li class=MsoNormal style='mso-list:l23 level1 lfo36;tab-stops:list .5in'><span
+       style='mso-bidi-font-size:12.0pt;font-family:"Courier New";mso-bidi-font-family:
+       "Times New Roman"'>public int indexOf(Object element)<o:p></o:p></span></li>
+   <li class=MsoNormal style='mso-list:l23 level1 lfo36;tab-stops:list .5in'><span
+       style='mso-bidi-font-size:12.0pt;font-family:"Courier New";mso-bidi-font-family:
+       "Times New Roman"'>public int lastIndexOf(Object element)<o:p></o:p></span></li>
+  </ul>
+  <p class=MsoNormal style='margin-left:.25in'><span style='mso-bidi-font-size:
+  12.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <ul style='margin-top:0in' type=disc>
+   <li class=MsoNormal style='mso-list:l23 level1 lfo36;tab-stops:list .5in'><span
+       style='mso-bidi-font-size:12.0pt;font-family:"Courier New";mso-bidi-font-family:
+       "Times New Roman"'>public String toString()</span><span
+       style='mso-bidi-font-size:12.0pt'><o:p></o:p></span></li>
+  </ul>
+  <p class=MsoNormal style='margin-left:.25in'><span style='mso-bidi-font-size:
+  12.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <ul style='margin-top:0in' type=disc>
+   <li class=MsoNormal style='mso-list:l23 level1 lfo36;tab-stops:list .5in'><span
+       style='mso-bidi-font-size:12.0pt;font-family:"Courier New";mso-bidi-font-family:
+       "Times New Roman"'>public <b>abstract</b> Iterator iterator()<o:p></o:p></span></li>
+   <li class=MsoNormal style='mso-list:l23 level1 lfo36;tab-stops:list .5in'><span
+       style='mso-bidi-font-size:12.0pt;font-family:"Courier New";mso-bidi-font-family:
+       "Times New Roman"'>public <b>abstract</b> ListIterator listIterator()<o:p></o:p></span></li>
+   <li class=MsoNormal style='mso-list:l23 level1 lfo36;tab-stops:list .5in'><span
+       style='mso-bidi-font-size:12.0pt;font-family:"Courier New";mso-bidi-font-family:
+       "Times New Roman"'>public <b>abstract</b> ListIterator listIterator(int
+       index)</span><span style='mso-bidi-font-size:12.0pt'><o:p></o:p></span></li>
+  </ul>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span style='mso-bidi-font-size:12.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='mso-bidi-font-size:12.0pt'>You should NOT
+modify the provided </span><span style='mso-bidi-font-size:12.0pt;font-family:
+"Courier New";mso-bidi-font-family:"Times New Roman"'>AbstractLinkedList</span><span
+style='mso-bidi-font-size:12.0pt'> file to complete this assignment.<span
+style="mso-spacerun: yes">  </span>You must use the provided file as-is.<o:p></o:p></span></p>
+
+<h3>Your Assignment:</h3>
+
+<p class=MsoNormal><span style='mso-bidi-font-size:12.0pt'>The </span><span
+style='mso-bidi-font-size:12.0pt;font-family:"Courier New";mso-bidi-font-family:
+"Times New Roman"'>AbstractLinkedList</span><span style='mso-bidi-font-size:
+12.0pt'> described previously is incomplete.<span style="mso-spacerun: yes"> 
+</span>It has several abstract methods that must be implemented, and it does
+not have any iterator.<span style="mso-spacerun: yes">  </span>Your assignment
+is to write a class </span><span style='mso-bidi-font-size:12.0pt;font-family:
+"Courier New";mso-bidi-font-family:"Times New Roman"'>MyLinkedList</span><span
+style='mso-bidi-font-size:12.0pt'> that extends the </span><span
+style='mso-bidi-font-size:12.0pt;font-family:"Courier New";mso-bidi-font-family:
+"Times New Roman"'>AbstractLinkedList</span><span style='mso-bidi-font-size:
+12.0pt'> and completes the implementation as specified below.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='mso-bidi-font-size:12.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<table border=1 cellspacing=0 cellpadding=0 style='background:#DFDFDF;
+ mso-shading:windowtext;mso-pattern:gray-125 auto;border-collapse:collapse;
+ border:none;mso-border-alt:solid windowtext .5pt;mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+ <tr>
+  <td width=734 valign=top style='width:7.65in;border:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <ul style='margin-top:0in' type=disc>
+   <li class=MsoNormal style='mso-list:l35 level1 lfo38;tab-stops:list .5in'><span
+       style='font-size:11.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+       mso-bidi-font-family:"Times New Roman"'>public MyLinkedList()<br>
+       </span><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt'>Constructs
+       a new empty linked list.<br style='mso-special-character:line-break'>
+       <![if !supportLineBreakNewLine]><br style='mso-special-character:line-break'>
+       <![endif]><o:p></o:p></span></li>
+   <li class=MsoNormal style='mso-list:l35 level1 lfo38;tab-stops:list .5in'><span
+       style='font-size:11.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+       mso-bidi-font-family:"Times New Roman"'>public Iterator iterator()<br>
+       </span><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt'>Returns
+       an iterator over the elements in this list (in proper sequence).<br>
+       Your implementation should merely return a list iterator over the list
+       that begins at index 0.<br>
+       This method's runtime should be O(1).<br style='mso-special-character:
+       line-break'>
+       <![if !supportLineBreakNewLine]><br style='mso-special-character:line-break'>
+       <![endif]><o:p></o:p></span></li>
+   <li class=MsoNormal style='mso-list:l35 level1 lfo38;tab-stops:list .5in'><span
+       style='font-size:11.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+       mso-bidi-font-family:"Times New Roman"'>public ListIterator
+       listIterator()<br>
+       </span><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt'>Returns
+       an iterator of the elements in this list (in proper sequence).<span
+       style="mso-spacerun: yes">  </span>This operation is the same as
+       creating a list iterator at index 0.<br>
+       This method's runtime should be O(1).</span><span style='font-size:11.0pt;
+       mso-bidi-font-size:12.0pt;font-family:"Courier New";mso-bidi-font-family:
+       "Times New Roman"'><br style='mso-special-character:line-break'>
+       <![if !supportLineBreakNewLine]><br style='mso-special-character:line-break'>
+       <![endif]></span><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt'><o:p></o:p></span></li>
+   <li class=MsoNormal style='mso-list:l35 level1 lfo38;tab-stops:list .5in'><span
+       style='font-size:11.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+       mso-bidi-font-family:"Times New Roman"'>public ListIterator
+       listIterator(int index)<br>
+       </span><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt'>Returns
+       a list iterator of the elements in this list (in proper sequence),
+       starting at the specified position in this list. The specified index
+       indicates the first element that would be returned by an initial call to
+       the iterator's </span><span style='font-size:11.0pt;mso-bidi-font-size:
+       12.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman"'>next</span><span
+       style='font-size:11.0pt;mso-bidi-font-size:12.0pt'> method.<span
+       style="mso-spacerun: yes">  </span><span style='background:yellow;
+       mso-highlight:yellow'>If the index is less than zero or greater than the
+       list's size, this method should throw an </span></span><span
+       style='font-size:11.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+       mso-bidi-font-family:"Times New Roman";background:yellow;mso-highlight:
+       yellow'>IndexOutOfBoundsException</span><span style='font-size:11.0pt;
+       mso-bidi-font-size:12.0pt;background:yellow;mso-highlight:yellow'>.</span><span
+       style='font-size:11.0pt;mso-bidi-font-size:12.0pt'> <br>
+       This method's runtime should be O(<i>n</i>) where <i>n</i> = </span><span
+       style='font-size:11.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+       mso-bidi-font-family:"Times New Roman"'>index</span><span
+       style='font-size:11.0pt;mso-bidi-font-size:12.0pt'>.</span><span
+       style='mso-bidi-font-size:12.0pt'><o:p></o:p></span></li>
+  </ul>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span style='mso-bidi-font-size:12.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='mso-bidi-font-size:12.0pt'>In other words,
+after you're done writing your code, it should be possible to make statements
+like this:<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='mso-bidi-font-size:12.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman"'>AbstractLinkedList list = new
+MyLinkedList();<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman"'>// ... put some elements into the list
+...<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman"'>Iterator itr1 = list.iterator();<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman"'>ListIterator itr2 =
+list.listIterator();<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman"'>while (itr2.hasNext()) {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman"'><span style="mso-spacerun: yes"> 
+</span>System.out.println(itr2.nextIndex() + &quot; : &quot; + itr2.next());<br>
+}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman"'>ListIterator itr3 =
+list.listIterator(17);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman"'>while (itr3.hasPrevious()) {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman"'><span style="mso-spacerun: yes"> 
+</span>System.out.println(itr2.previousIndex() + &quot; : &quot; +
+itr2.previous());<br>
+}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='mso-bidi-font-size:12.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='mso-bidi-font-size:12.0pt'>The implementation
+of the above methods is not especially difficult; the difficulty comes from
+implementing your linked list iterator class.<span style="mso-spacerun: yes"> 
+</span>To implement the </span><span style='mso-bidi-font-size:12.0pt;
+font-family:"Courier New";mso-bidi-font-family:"Times New Roman"'>iterator</span><span
+style='mso-bidi-font-size:12.0pt'>, </span><span style='mso-bidi-font-size:
+12.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman"'>listIterator</span><span
+style='mso-bidi-font-size:12.0pt'> , </span><span style='mso-bidi-font-size:
+12.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman"'>listIterator(int)</span><span
+style='mso-bidi-font-size:12.0pt'>, and other methods and several other
+portions of the code for this program, you must write a class that implements
+the </span><span style='mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman"'>java.util.ListIterator</span><span
+style='mso-bidi-font-size:12.0pt'> interface.<span style="mso-spacerun: yes"> 
+</span>The relevant Java documentation for this interface is available at <a
+href="http://java.sun.com/j2se/1.4.2/docs/api/java/util/ListIterator.html">http://java.sun.com/j2se/1.4.2/docs/api/java/util/ListIterator.html</a>.<span
+style="mso-spacerun: yes">  </span>The three methods just mentioned should each
+create an instance of your iterator, moved to the appropriate place in the
+list, and return it.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='mso-bidi-font-size:12.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='mso-bidi-font-size:12.0pt'>Implement your list
+iterator as an inner class inside your </span><span style='mso-bidi-font-size:
+12.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman"'>MyLinkedList</span><span
+style='mso-bidi-font-size:12.0pt'> class, so that it has access to the fields
+and methods of the </span><span style='mso-bidi-font-size:12.0pt;font-family:
+"Courier New";mso-bidi-font-family:"Times New Roman"'>MyLinkedList</span><span
+style='mso-bidi-font-size:12.0pt'> object that created it.<span
+style="mso-spacerun: yes">  </span>Your list iterator should only allocate a
+fixed amount of storage; it may not contain, for example, an array of all the
+elements in the list.<span style="mso-spacerun: yes">  </span>Please put brief
+comments on your iterator class and its methods.<span style="mso-spacerun:
+yes">  </span>You do not need to use Javadoc-style comments.<br>
+<br>
+The </span><span style='mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman"'>ListIterator</span><span
+style='mso-bidi-font-size:12.0pt'> interface has the following methods.<span
+style="mso-spacerun: yes">  </span>All methods of your list iterator class
+except its constructor must run in <b>O(1) time</b> for full credit.<span
+style="mso-spacerun: yes">  </span>Your iterator and your </span><span
+style='mso-bidi-font-size:12.0pt;font-family:"Courier New";mso-bidi-font-family:
+"Times New Roman"'>MyLinkedList</span><span style='mso-bidi-font-size:12.0pt'>
+class should be able to handle any type of object as elements; do not assume
+that the elements are any particular type.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='mso-bidi-font-size:12.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='mso-bidi-font-size:12.0pt'>Iterator
+constructor:<o:p></o:p></span></p>
+
+<table border=1 cellspacing=0 cellpadding=0 style='background:#DFDFDF;
+ mso-shading:windowtext;mso-pattern:gray-125 auto;border-collapse:collapse;
+ border:none;mso-border-alt:solid windowtext .5pt;mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+ <tr>
+  <td width=734 valign=top style='width:7.65in;border:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <ul style='margin-top:0in' type=disc>
+   <li class=MsoNormal style='mso-list:l23 level1 lfo36;tab-stops:list .5in'><span
+       style='font-size:11.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+       mso-bidi-font-family:"Times New Roman"'>public <i>YourListIteratorClassName</i>(int
+       index)<br>
+       </span><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt'>Constructs
+       your list iterator such that the first element that will be returned by
+       a call to </span><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+       font-family:"Courier New";mso-bidi-font-family:"Times New Roman"'>next</span><span
+       style='font-size:11.0pt;mso-bidi-font-size:12.0pt'> will be the element
+       at the given index, and a call to the iterator's </span><span
+       style='font-size:11.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+       mso-bidi-font-family:"Times New Roman"'>nextIndex</span><span
+       style='font-size:11.0pt;mso-bidi-font-size:12.0pt'> method would return
+       the value </span><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+       font-family:"Courier New";mso-bidi-font-family:"Times New Roman"'>index</span><span
+       style='font-size:11.0pt;mso-bidi-font-size:12.0pt'>.<span
+       style="mso-spacerun: yes">  </span>This constructor is not part of the </span><span
+       style='font-size:11.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+       mso-bidi-font-family:"Times New Roman"'>java.util.ListIterator</span><span
+       style='font-size:11.0pt;mso-bidi-font-size:12.0pt'> interface, but you need
+       some way to create your iterator object and move it to the correct
+       starting index, so this constructor is highly recommended.</span><span
+       style='mso-bidi-font-size:12.0pt'><o:p></o:p></span></li>
+  </ul>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span style='mso-bidi-font-size:12.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='mso-bidi-font-size:12.0pt'>Iterator methods for
+iterating forward through the list elements:<o:p></o:p></span></p>
+
+<table border=1 cellspacing=0 cellpadding=0 style='background:#DFDFDF;
+ mso-shading:windowtext;mso-pattern:gray-125 auto;border-collapse:collapse;
+ border:none;mso-border-alt:solid windowtext .5pt;mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+ <tr>
+  <td width=734 valign=top style='width:7.65in;border:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <ul style='margin-top:0in' type=disc>
+   <li class=MsoNormal style='mso-list:l23 level1 lfo36;tab-stops:list .5in'><span
+       style='font-size:11.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+       mso-bidi-font-family:"Times New Roman"'>public boolean hasNext()<br>
+       </span><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt'>Returns </span><span
+       style='font-size:11.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+       mso-bidi-font-family:"Times New Roman"'>true</span><span
+       style='font-size:11.0pt;mso-bidi-font-size:12.0pt'> if this list iterator
+       has more elements remaining. (In other words, returns </span><span
+       style='font-size:11.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+       mso-bidi-font-family:"Times New Roman"'>true</span><span
+       style='font-size:11.0pt;mso-bidi-font-size:12.0pt'> if a call to </span><span
+       style='font-size:11.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+       mso-bidi-font-family:"Times New Roman"'>next</span><span
+       style='font-size:11.0pt;mso-bidi-font-size:12.0pt'> would return an
+       element rather than throwing an exception.)<br style='mso-special-character:
+       line-break'>
+       <![if !supportLineBreakNewLine]><br style='mso-special-character:line-break'>
+       <![endif]><o:p></o:p></span></li>
+   <li class=MsoNormal style='mso-list:l23 level1 lfo36;tab-stops:list .5in'><span
+       style='font-size:11.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+       mso-bidi-font-family:"Times New Roman"'>public Object next()<br>
+       </span><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt'>Returns
+       the next element in the list, and advances the iterator's position by
+       one element.<span style="mso-spacerun: yes">  </span>This is the element
+       whose index would currently be returned by </span><span
+       style='font-size:11.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+       mso-bidi-font-family:"Times New Roman"'>nextIndex()</span><span
+       style='font-size:11.0pt;mso-bidi-font-size:12.0pt'>, as well as the
+       element that would be returned by a call to </span><span
+       style='font-size:11.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+       mso-bidi-font-family:"Times New Roman"'>get(nextIndex())</span><span
+       style='font-size:11.0pt;mso-bidi-font-size:12.0pt'> on the list itself.
+       This method may be called repeatedly to iterate through the list in a
+       forward direction and return each element of it in forward order.<br>
+       <br>
+       Your implementation should throw a </span><span style='font-size:11.0pt;
+       mso-bidi-font-size:12.0pt;font-family:"Courier New";mso-bidi-font-family:
+       "Times New Roman"'>NoSuchElementException</span><span style='font-size:
+       11.0pt;mso-bidi-font-size:12.0pt'> if the iterator has already finished
+       iterating over all elements of the list.<br style='mso-special-character:
+       line-break'>
+       <![if !supportLineBreakNewLine]><br style='mso-special-character:line-break'>
+       <![endif]><o:p></o:p></span></li>
+   <li class=MsoNormal style='mso-list:l23 level1 lfo36;tab-stops:list .5in'><span
+       style='font-size:11.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+       mso-bidi-font-family:"Times New Roman"'>public int nextIndex()<br>
+       </span><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt'>Returns
+       the index of the element that would be returned by a subsequent call to </span><span
+       style='font-size:11.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+       mso-bidi-font-family:"Times New Roman"'>next</span><span
+       style='font-size:11.0pt;mso-bidi-font-size:12.0pt'>. This value is
+       always one more than the value that would be returned by </span><span
+       style='font-size:11.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+       mso-bidi-font-family:"Times New Roman"'>previousIndex</span><span
+       style='font-size:11.0pt;mso-bidi-font-size:12.0pt'>.<span
+       style="mso-spacerun: yes">  </span>Returns the list's size if the list
+       iterator is at the end of the list.<span style="mso-spacerun: yes"> 
+       </span>Note that calling this method should not actually change the
+       iterator's position.<br>
+       <br>
+       For example, calling </span><span style='font-size:11.0pt;mso-bidi-font-size:
+       12.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman"'>listIterator(0).nextIndex()</span><span
+       style='font-size:11.0pt;mso-bidi-font-size:12.0pt'> on any nonempty list
+       would return the value 0.</span><span style='mso-bidi-font-size:12.0pt'><o:p></o:p></span></li>
+  </ul>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span style='mso-bidi-font-size:12.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='mso-bidi-font-size:12.0pt'>Iterator methods for
+iterating backward through the list elements:<o:p></o:p></span></p>
+
+<table border=1 cellspacing=0 cellpadding=0 style='background:#DFDFDF;
+ mso-shading:windowtext;mso-pattern:gray-125 auto;border-collapse:collapse;
+ border:none;mso-border-alt:solid windowtext .5pt;mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+ <tr>
+  <td width=734 valign=top style='width:7.65in;border:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <ul style='margin-top:0in' type=disc>
+   <li class=MsoNormal style='mso-list:l23 level1 lfo36;tab-stops:list .5in'><span
+       style='font-size:11.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+       mso-bidi-font-family:"Times New Roman"'>public boolean hasPrevious()<br>
+       </span><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt'>Returns </span><span
+       style='font-size:11.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+       mso-bidi-font-family:"Times New Roman"'>true</span><span
+       style='font-size:11.0pt;mso-bidi-font-size:12.0pt'> if this list
+       iterator has elements remaining behind it. (In other words, returns </span><span
+       style='font-size:11.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+       mso-bidi-font-family:"Times New Roman"'>true</span><span
+       style='font-size:11.0pt;mso-bidi-font-size:12.0pt'> if a call to </span><span
+       style='font-size:11.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+       mso-bidi-font-family:"Times New Roman"'>previous</span><span
+       style='font-size:11.0pt;mso-bidi-font-size:12.0pt'> would return an
+       element rather than throwing an exception.)<br style='mso-special-character:
+       line-break'>
+       <![if !supportLineBreakNewLine]><br style='mso-special-character:line-break'>
+       <![endif]><o:p></o:p></span></li>
+   <li class=MsoNormal style='mso-list:l23 level1 lfo36;tab-stops:list .5in'><span
+       style='font-size:11.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+       mso-bidi-font-family:"Times New Roman"'>public Object previous()<br>
+       </span><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt'>Returns
+       the previous element in the list, and decreases the iterator's position
+       by one element.<span style="mso-spacerun: yes">  </span>This is the
+       element whose index would currently be returned by </span><span
+       style='font-size:11.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+       mso-bidi-font-family:"Times New Roman"'>previousIndex()</span><span
+       style='font-size:11.0pt;mso-bidi-font-size:12.0pt'>, as well as the
+       element that would be returned by a call to </span><span
+       style='font-size:11.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+       mso-bidi-font-family:"Times New Roman"'>get(previousIndex())</span><span
+       style='font-size:11.0pt;mso-bidi-font-size:12.0pt'> on the list itself.
+       This method may be called repeatedly to iterate through the list in a
+       reverse direction and return each element of it in reverse order.<br>
+       <br>
+       Your implementation should throw a </span><span style='font-size:11.0pt;
+       mso-bidi-font-size:12.0pt;font-family:"Courier New";mso-bidi-font-family:
+       "Times New Roman"'>NoSuchElementException</span><span style='font-size:
+       11.0pt;mso-bidi-font-size:12.0pt'> if the iterator is at the beginning
+       of the list.<br style='mso-special-character:line-break'>
+       <![if !supportLineBreakNewLine]><br style='mso-special-character:line-break'>
+       <![endif]><o:p></o:p></span></li>
+   <li class=MsoNormal style='mso-list:l23 level1 lfo36;tab-stops:list .5in'><span
+       style='font-size:11.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+       mso-bidi-font-family:"Times New Roman"'>public int previousIndex()<br>
+       </span><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt'>Returns
+       the index of the element that would be returned by a subsequent call to </span><span
+       style='font-size:11.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+       mso-bidi-font-family:"Times New Roman"'>previous</span><span
+       style='font-size:11.0pt;mso-bidi-font-size:12.0pt'>. This value is
+       always one less than the value that would be returned by </span><span
+       style='font-size:11.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+       mso-bidi-font-family:"Times New Roman"'>nextIndex</span><span
+       style='font-size:11.0pt;mso-bidi-font-size:12.0pt'>.<span
+       style="mso-spacerun: yes">  </span>Returns -1 if the list iterator is at
+       the beginning of the list.<span style="mso-spacerun: yes">  </span>Note
+       that calling this method should not actually change the iterator's
+       position.<br>
+       <br>
+       For example, calling </span><span style='font-size:11.0pt;mso-bidi-font-size:
+       12.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman"'>listIterator(0).previousIndex()</span><span
+       style='font-size:11.0pt;mso-bidi-font-size:12.0pt'> on any list would
+       return the value -1.</span><span style='mso-bidi-font-size:12.0pt'><o:p></o:p></span></li>
+  </ul>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span style='mso-bidi-font-size:12.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='mso-bidi-font-size:12.0pt'>Iterator methods for
+modifying the list's contents:<o:p></o:p></span></p>
+
+<table border=1 cellspacing=0 cellpadding=0 style='background:#DFDFDF;
+ mso-shading:windowtext;mso-pattern:gray-125 auto;border-collapse:collapse;
+ border:none;mso-border-alt:solid windowtext .5pt;mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+ <tr>
+  <td width=734 valign=top style='width:7.65in;border:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <ul style='margin-top:0in' type=disc>
+   <li class=MsoNormal style='mso-list:l23 level1 lfo36;tab-stops:list .5in'><span
+       style='font-size:11.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+       mso-bidi-font-family:"Times New Roman"'>public void add(Object element)<br>
+       </span><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt'>Inserts
+       the specified element into the list. The element is inserted immediately
+       before the next element that would be returned by </span><span
+       style='font-size:11.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+       mso-bidi-font-family:"Times New Roman"'>next</span><span
+       style='font-size:11.0pt;mso-bidi-font-size:12.0pt'>, if any, and
+       immediately after the next element that would be returned by </span><span
+       style='font-size:11.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+       mso-bidi-font-family:"Times New Roman"'>previous</span><span
+       style='font-size:11.0pt;mso-bidi-font-size:12.0pt'>, if any. (If the
+       list contains no elements, the new element becomes the sole element on
+       the list.)<br>
+       <br>
+       The new element is inserted before the implicit cursor: a subsequent
+       call to </span><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+       font-family:"Courier New";mso-bidi-font-family:"Times New Roman"'>next</span><span
+       style='font-size:11.0pt;mso-bidi-font-size:12.0pt'> would be unaffected.
+       (This call also increases by 1 the value that would be returned by a
+       call to </span><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+       font-family:"Courier New";mso-bidi-font-family:"Times New Roman"'>nextIndex</span><span
+       style='font-size:11.0pt;mso-bidi-font-size:12.0pt'>.)<br
+       style='mso-special-character:line-break'>
+       <![if !supportLineBreakNewLine]><br style='mso-special-character:line-break'>
+       <![endif]><o:p></o:p></span></li>
+   <li class=MsoNormal style='mso-list:l23 level1 lfo36;tab-stops:list .5in'><span
+       style='font-size:11.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+       mso-bidi-font-family:"Times New Roman"'>public void remove()<br>
+       </span><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt'>Removes
+       from the list the last element that was returned by </span><span
+       style='font-size:11.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+       mso-bidi-font-family:"Times New Roman"'>next</span><span
+       style='font-size:11.0pt;mso-bidi-font-size:12.0pt'> or </span><span
+       style='font-size:11.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+       mso-bidi-font-family:"Times New Roman"'>previous</span><span
+       style='font-size:11.0pt;mso-bidi-font-size:12.0pt'>.<span
+       style="mso-spacerun: yes">  </span>You do not need to support the
+       ability to call remove more than once per call to </span><span
+       style='font-size:11.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+       mso-bidi-font-family:"Times New Roman"'>next</span><span
+       style='font-size:11.0pt;mso-bidi-font-size:12.0pt'> (that is, you only
+       need to have the ability to remove the last element seen).<span
+       style="mso-spacerun: yes">  </span>You also do not need to support
+       removal if your iterator's </span><span style='font-size:11.0pt;
+       mso-bidi-font-size:12.0pt;font-family:"Courier New";mso-bidi-font-family:
+       "Times New Roman"'>add</span><span style='font-size:11.0pt;mso-bidi-font-size:
+       12.0pt'> method has been called since the last call to </span><span
+       style='font-size:11.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+       mso-bidi-font-family:"Times New Roman"'>next</span><span
+       style='font-size:11.0pt;mso-bidi-font-size:12.0pt'>.<span
+       style="mso-spacerun: yes">  </span>Signify unsupported removal states by
+       throwing an </span><span style='font-size:11.0pt;mso-bidi-font-size:
+       12.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman"'>IllegalStateException</span><span
+       style='font-size:11.0pt;mso-bidi-font-size:12.0pt'>.<br
+       style='mso-special-character:line-break'>
+       <![if !supportLineBreakNewLine]><br style='mso-special-character:line-break'>
+       <![endif]><o:p></o:p></span></li>
+   <li class=MsoNormal style='mso-list:l23 level1 lfo36;tab-stops:list .5in'><span
+       style='font-size:11.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+       mso-bidi-font-family:"Times New Roman"'>public void set(Object element)<br>
+       </span><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt'>Replaces
+       the last element returned by </span><span style='font-size:11.0pt;
+       mso-bidi-font-size:12.0pt;font-family:"Courier New";mso-bidi-font-family:
+       "Times New Roman"'>next</span><span style='font-size:11.0pt;mso-bidi-font-size:
+       12.0pt'> or </span><span style='font-size:11.0pt;mso-bidi-font-size:
+       12.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman"'>previous</span><span
+       style='font-size:11.0pt;mso-bidi-font-size:12.0pt'> with the specified
+       element (optional operation).<span style="mso-spacerun: yes"> 
+       </span>You do not need to support the ability to call </span><span
+       style='font-size:11.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+       mso-bidi-font-family:"Times New Roman"'>set</span><span
+       style='font-size:11.0pt;mso-bidi-font-size:12.0pt'> right after calling
+       either </span><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+       font-family:"Courier New";mso-bidi-font-family:"Times New Roman"'>remove</span><span
+       style='font-size:11.0pt;mso-bidi-font-size:12.0pt'> or </span><span
+       style='font-size:11.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+       mso-bidi-font-family:"Times New Roman"'>add</span><span
+       style='font-size:11.0pt;mso-bidi-font-size:12.0pt'> ; you may assume
+       that the most recent call was to </span><span style='font-size:11.0pt;
+       mso-bidi-font-size:12.0pt;font-family:"Courier New";mso-bidi-font-family:
+       "Times New Roman"'>next</span><span style='font-size:11.0pt;mso-bidi-font-size:
+       12.0pt'> or </span><span style='font-size:11.0pt;mso-bidi-font-size:
+       12.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman"'>previous</span><span
+       style='mso-bidi-font-size:12.0pt'>.<o:p></o:p></span></li>
+  </ul>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span style='mso-bidi-font-size:12.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='mso-bidi-font-size:12.0pt'>You should NOT
+implement your iterator's methods by calling the corresponding methods on its
+associated linked list.<span style="mso-spacerun: yes">  </span>For example, do
+not implement the iterator's </span><span style='mso-bidi-font-size:12.0pt;
+font-family:"Courier New";mso-bidi-font-family:"Times New Roman"'>add</span><span
+style='mso-bidi-font-size:12.0pt'> method by calling </span><span
+style='mso-bidi-font-size:12.0pt;font-family:"Courier New";mso-bidi-font-family:
+"Times New Roman"'>add</span><span style='mso-bidi-font-size:12.0pt'> on the
+linked list.<span style="mso-spacerun: yes">  </span>This is bad because it
+will not have the proper Big-Oh runtime.<span style="mso-spacerun: yes"> 
+</span>Instead, implement these methods by directly manipulating list nodes and
+links between them.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='mso-bidi-font-size:12.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<h3>Extra Credit:</h3>
+
+<p class=MsoNormal>For +2 points extra credit, make your iterator <i>fail-fast</i>
+by crashing on any external modification to the linked list during
+iteration.<span style="mso-spacerun: yes">  </span>To be precise, if anyone
+uses a <span style='font-family:"Courier New";mso-bidi-font-family:"Times New Roman"'>MyLinkedList</span>
+in the following way:</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<ol style='margin-top:0in' start=1 type=1>
+ <li class=MsoNormal style='mso-list:l29 level1 lfo41;tab-stops:list .5in'>creates
+     an instance of your list iterator</li>
+ <li class=MsoNormal style='mso-list:l29 level1 lfo41;tab-stops:list .5in'>modifies
+     the list in some way, not through your iterator (such as by calling <span
+     style='font-family:"Courier New";mso-bidi-font-family:"Times New Roman"'>add</span>
+     or <span style='font-family:"Courier New";mso-bidi-font-family:"Times New Roman"'>clear</span>
+     on the list)</li>
+ <li class=MsoNormal style='mso-list:l29 level1 lfo41;tab-stops:list .5in'>calls
+     any of your iterator's methods</li>
+</ol>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal>Then your list iterator should throw a <span
+style='font-family:"Courier New";mso-bidi-font-family:"Times New Roman"'>java.util.ConcurrentModificationException</span>
+at the start of part 3; at the start of whatever iterator method was invoked.</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal>To help you implement this functionality, the <span
+style='font-family:"Courier New";mso-bidi-font-family:"Times New Roman"'>AbstractLinkedList</span>
+has a field named <span style='font-family:"Courier New";mso-bidi-font-family:
+"Times New Roman"'>myVersion</span> that is incremented each time the linked
+list is changed.<span style="mso-spacerun: yes">  </span>The <span
+style='font-family:"Courier New";mso-bidi-font-family:"Times New Roman"'>myVersion</span>
+doesn't change when your list iterator modifies the list.</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal>The +2 points will be awarded if the iterator successfully
+completes the above behavior.<span style="mso-spacerun: yes">  </span>Partial
+extra points may be awarded for partially working fail-fast implementations.</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<b><span style='font-size:13.0pt;font-family:Arial;mso-fareast-font-family:
+"Times New Roman";mso-ansi-language:EN-US;mso-fareast-language:AR-SA;
+mso-bidi-language:AR-SA'><br clear=all style='page-break-before:always'>
+</span></b>
+
+<h3>Hints and Suggestions:</h3>
+
+<p class=MsoNormal><span style='mso-bidi-font-size:12.0pt'>If you have trouble
+successfully implementing the iterator, a quick hack to get a </span><span
+style='mso-bidi-font-size:12.0pt;font-family:"Courier New";mso-bidi-font-family:
+"Times New Roman"'>ListIterator</span><span style='mso-bidi-font-size:12.0pt'>
+is the following code (which could be placed in your methods of your </span><span
+style='mso-bidi-font-size:12.0pt;font-family:"Courier New";mso-bidi-font-family:
+"Times New Roman"'>MyLinkedList</span><span style='mso-bidi-font-size:12.0pt'>
+class):<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='mso-bidi-font-size:12.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman"'>ListIterator itr =
+Arrays.asList(this.toArray()).listIterator();<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='mso-bidi-font-size:12.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='mso-bidi-font-size:12.0pt'>The code above
+copies the elements of your </span><span style='mso-bidi-font-size:12.0pt;
+font-family:"Courier New";mso-bidi-font-family:"Times New Roman"'>MyLinkedList</span><span
+style='mso-bidi-font-size:12.0pt'> into a temporary second </span><span
+style='mso-bidi-font-size:12.0pt;font-family:"Courier New";mso-bidi-font-family:
+"Times New Roman"'>List</span><span style='mso-bidi-font-size:12.0pt'>, and
+returns a list iterator for this second list.<span style="mso-spacerun: yes"> 
+</span>It will work for read-only operations but not for removals or other
+modifications, because it would modify the second list and not your own.<span
+style="mso-spacerun: yes">  </span>Using hacks like the above are considered
+unacceptable for this assignment because of their unnecessarily slow runtime
+(the line above is O(n) because it must copy all the elements of your list.)<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='mso-bidi-font-size:12.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='mso-bidi-font-size:12.0pt'>In general if there
+is a method that you do not wish to implement right away, write its header and
+throw an </span><span style='mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman"'>UnsupportedOperationException</span><span
+style='mso-bidi-font-size:12.0pt'> inside.<span style="mso-spacerun: yes"> 
+</span>This will allow your code to compile so that you can test
+incrementally.<span style="mso-spacerun: yes">  </span>Your code MUST compile
+to get any correctness points.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='mso-bidi-font-size:12.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='mso-bidi-font-size:12.0pt'>I suggest that you
+first get the </span><span style='mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman"'>MyLinkedList</span><span
+style='mso-bidi-font-size:12.0pt'> class compiling, then write a basic iterator
+that can do </span><span style='mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman"'>hasNext</span><span style='mso-bidi-font-size:
+12.0pt'> and </span><span style='mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman"'>next</span><span style='mso-bidi-font-size:
+12.0pt'>.<span style="mso-spacerun: yes">  </span>Then implement the </span><span
+style='mso-bidi-font-size:12.0pt;font-family:"Courier New";mso-bidi-font-family:
+"Times New Roman"'>nextIndex</span><span style='mso-bidi-font-size:12.0pt'>
+method.<span style="mso-spacerun: yes">  </span>After that, implement the
+ability to start the iterator at a specific index.<span style="mso-spacerun:
+yes">  </span>From there, work on the ability to iterate backwards with </span><span
+style='mso-bidi-font-size:12.0pt;font-family:"Courier New";mso-bidi-font-family:
+"Times New Roman"'>hasPrevious</span><span style='mso-bidi-font-size:12.0pt'>, </span><span
+style='mso-bidi-font-size:12.0pt;font-family:"Courier New";mso-bidi-font-family:
+"Times New Roman"'>previous</span><span style='mso-bidi-font-size:12.0pt'>, and
+</span><span style='mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman"'>previousIndex</span><span
+style='mso-bidi-font-size:12.0pt'>.<span style="mso-spacerun: yes"> 
+</span>Lastly, look at the methods to modify the list: </span><span
+style='mso-bidi-font-size:12.0pt;font-family:"Courier New";mso-bidi-font-family:
+"Times New Roman"'>add</span><span style='mso-bidi-font-size:12.0pt'>, </span><span
+style='mso-bidi-font-size:12.0pt;font-family:"Courier New";mso-bidi-font-family:
+"Times New Roman"'>remove</span><span style='mso-bidi-font-size:12.0pt'>, and </span><span
+style='mso-bidi-font-size:12.0pt;font-family:"Courier New";mso-bidi-font-family:
+"Times New Roman"'>set</span><span style='mso-bidi-font-size:12.0pt'>.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='mso-bidi-font-size:12.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='mso-bidi-font-size:12.0pt'>To implement </span><span
+style='mso-bidi-font-size:12.0pt;font-family:"Courier New";mso-bidi-font-family:
+"Times New Roman"'>remove</span><span style='mso-bidi-font-size:12.0pt'>, you
+may wish to keep a reference to the last node whose element your iterator
+returned, so that you can unlink this node from the other nodes in the
+list.<span style="mso-spacerun: yes">  </span>Be careful about indexes becoming
+off-by-one after an </span><span style='mso-bidi-font-size:12.0pt;font-family:
+"Courier New";mso-bidi-font-family:"Times New Roman"'>add</span><span
+style='mso-bidi-font-size:12.0pt'> or </span><span style='mso-bidi-font-size:
+12.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman"'>remove</span><span
+style='mso-bidi-font-size:12.0pt'>.<o:p></o:p></span></p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<h3>Submission and Grading:</h3>
+
+<p class=MsoNormal>Submit this assignment online, as with all programming
+assignments, via the link on the course web site.<span style="mso-spacerun:
+yes">  </span>Turn in your <span style='font-family:"Courier New";mso-bidi-font-family:
+"Times New Roman"'>MyLinkedList.java</span> only.<span style="mso-spacerun:
+yes">  </span>This file must be named exactly correctly (case-sensitive) for
+full credit. </p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal>The correctness of your program will be graded on matching
+the expected behavior of the methods to be implemented.<span
+style="mso-spacerun: yes">  </span>You can use a &quot;diff&quot; style tool to
+compare your output to the expected output (TextPad has such an option under
+Tools, Compare Files...).<span style="mso-spacerun: yes">  </span>Exceptions
+should not occur under normal usage except as specified previously.</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal>The style and design of your program will be graded on whether
+you follow the program specification above, whether you implement the
+interfaces given, the reasonableness of your iterator algorithms, obeying the
+Big-Oh runtime requested for each method, the presence of reasonable brief
+comments in your source code (a short header on each file, each method, and on
+particularly complex code sections), the use of meaningful identifier names,
+avoiding redundancy, and general spacing and indentation of your code.</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal>This program must be completed individually.<span
+style="mso-spacerun: yes">  </span>It is subject to the plagiarism and conduct
+rules specified in the course syllabus.<span style="mso-spacerun: yes"> 
+</span>You should not look at complete source code for classes that implement <span
+style='font-family:"Courier New";mso-bidi-font-family:"Times New Roman"'>List</span>
+or <span style='font-family:"Courier New";mso-bidi-font-family:"Times New Roman"'>ListIterator</span>
+except as shown in the textbook; this includes looking at the Sun Java source
+code for these classes.<span style="mso-spacerun: yes">  </span>If you get help
+from friends, classmates, books or websites, please cite this in comments in
+your code.<span style='mso-bidi-font-size:12.0pt'><o:p></o:p></span></p>
+
+</div>
+
+</body>
+
+</html>

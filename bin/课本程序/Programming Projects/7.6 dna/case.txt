@@ -1,0 +1,4 @@
+not a protein
+CCATtAATgATCaCAGTt
+yes, a protein!
+ATgAGATCCgtgatGTGggaTCCTaCTCATTaa

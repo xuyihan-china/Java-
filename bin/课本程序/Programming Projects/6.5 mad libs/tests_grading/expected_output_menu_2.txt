@@ -1,0 +1,7 @@
+Welcome to the game of Mad Libs.
+I will ask you to provide various words
+and phrases to fill in a story.
+The result will be written to an output file.
+
+(C)reate mad-lib, (V)iew mad-lib, (Q)uit? Q
+

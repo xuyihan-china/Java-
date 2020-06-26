@@ -1,0 +1,28 @@
+Welcome to the game of Mad Libs.
+I will ask you to provide various words
+and phrases to fill in a story.
+The result will be written to an output file.
+
+(C)reate mad-lib, (V)iew mad-lib, (Q)uit? v
+Input file name: out0.txt
+
+I wannabe a ballerina when I grow up. 
+Just like my dad. 
+Life is smelly like that! 
+
+(C)reate mad-lib, (V)iew mad-lib, (Q)uit? v
+Input file name: out2.txt
+
+Barack Obama has announced that his sleepy 
+clothing store in the heart of downtown Timbuktu is having 
+a/an lazy sale of all merchandise, including 
+fat suits and slightly irregular spleens 
+available. Men's cable-knit bazookas , only $15.99. 
+Hand-woven Italian Star Wars action figures , 1/2-price. Double- 
+breasted cashmere toilets , $50.00. Genuine imported 
+pink greasy shoes, itchy handerchiefs, 
+and women's embroidered laptops , all at rock-bottom prices. 
+This is a chance to get some really crappy bargains. 
+
+(C)reate mad-lib, (V)iew mad-lib, (Q)uit? q
+

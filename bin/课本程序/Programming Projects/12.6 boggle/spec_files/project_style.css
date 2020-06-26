@@ -1,0 +1,56 @@
+body
+{
+	font-family: "Trebuchet MS", Helvetica, Arial, sans-serif;
+}
+
+.header
+{
+}
+
+.container
+{
+	width: 100%;
+}
+
+.assignment
+{
+	font-size: 2em;
+	font-family: Georgia, Serif;
+	font-variant: small-caps;
+	letter-spacing: .05em;
+}
+
+.assignment .dropcap
+{
+	font-weight: lighter;
+	font-size: 1.4em;
+}
+
+.due
+{
+	font-weight: bold;
+	font-variant: normal;
+
+	color: gray;
+}
+
+.class
+{
+	color: gray;
+	font-weight: bold;
+}
+
+hr
+{
+	border: 0;
+	height: 1px;
+	background-color: red;
+	color: red;
+}
+
+.content
+{
+	position: relative;
+	top: -13px;
+}
+

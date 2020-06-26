@@ -1,0 +1,41 @@
+Welcome to the game of Mad Libs.
+I will ask you to provide various words
+and phrases to fill in a story.
+The result will be written to an output file.
+
+(C)reate mad-lib, (V)iew mad-lib, (Q)uit? c
+Input file name: oops.txt
+File not found. Try again: bad file name here with lots of words
+File not found. Try again: mabldib0.txt
+File not found. Try again: foo bar baz madlib0.txt
+File not found. Try again: madlib0.txt foo bar baz
+File not found. Try again: madlib0.txt
+Output file name: reprompt_3.txt
+
+Please type a job: clown
+Please type an adjective: purple
+Your mad-lib has been created!
+
+(C)reate mad-lib, (V)iew mad-lib, (Q)uit? v
+Input file name: OUT0001.txt
+File not found. Try again: i_forget
+File not found. Try again: reprompt_3.txt
+
+I wannabe a clown when I grow up. 
+Just like my dad. 
+Life is purple like that! 
+
+(C)reate mad-lib, (V)iew mad-lib, (Q)uit? v
+Input file name: bad file name here with lots of words
+File not found. Try again: reprompt_3.txt please
+File not found. Try again: please use reprompt_3.txt
+File not found. Try again: what? huh?
+File not found. Try again: i don't know.
+File not found. Try again: reprompt_3.txt
+
+I wannabe a clown when I grow up. 
+Just like my dad. 
+Life is purple like that! 
+
+(C)reate mad-lib, (V)iew mad-lib, (Q)uit? q
+

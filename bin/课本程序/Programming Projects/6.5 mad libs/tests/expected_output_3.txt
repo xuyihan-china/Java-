@@ -1,0 +1,110 @@
+Welcome to the game of Mad Libs.
+I will ask you to provide various words
+and phrases to fill in a story.
+The result will be written to an output file.
+
+(C)reate mad-lib, (V)iew mad-lib, (Q)uit? a
+(C)reate mad-lib, (V)iew mad-lib, (Q)uit? S
+(C)reate mad-lib, (V)iew mad-lib, (Q)uit? View
+(C)reate mad-lib, (V)iew mad-lib, (Q)uit? v
+Input file name: out1.txt
+
+One of the most silly characters in fiction is named 
+"Tarzan of the apples ." Tarzan was raised by a/an 
+frisbee and lives in the hungry jungle in the 
+heart of darkest Tacoma, WA . He spends most of his time 
+eating bees and swinging from tree to umbrella . 
+Whenever he gets angry, he beats on his chest and says, 
+" burp !" This is his war cry. Tarzan always dresses in 
+shiny shorts made from the skin of a/an jelly donut 
+and his best friend is a/an beautiful chimpanzee named 
+Cheetah. He is supposed to be able to speak to elephants and 
+spoons . In the movies, Tarzan is played by Keanu Reeves . 
+
+(C)reate mad-lib, (V)iew mad-lib, (Q)uit? C
+Input file name: madlib2.txt
+Output file name: story2.txt
+
+Please type a male name: Barack Obama
+Please type an adjective: sleepy
+Please type a city: Timbuktu
+Please type an adjective: lazy
+Please type an adjective: fat
+Please type a plural noun: spleens
+Please type a plural noun: bazookas
+Please type a plural noun: Star Wars action figures
+Please type a plural noun: toilets
+Please type a color: pink
+Please type an adjective: greasy
+Please type an adjective: itchy
+Please type a plural noun: laptops
+Please type an adjective: crappy
+Your mad-lib has been created!
+
+(C)reate mad-lib, (V)iew mad-lib, (Q)uit? create
+(C)reate mad-lib, (V)iew mad-lib, (Q)uit? make new mad-lib
+(C)reate mad-lib, (V)iew mad-lib, (Q)uit? c
+Input file name: MAD_LIB_3.txt
+File not found. Try again: mad_lib3.txt
+File not found. Try again: madlib3.txt
+Output file name: result3.txt
+
+Please type an age: 75
+Please type an adjective: moist
+Please type an actor or actress: David Hasselhoff
+Please type an emotion: resentment
+Please type a body part: kneecap
+Please type an articles of clothing: socks
+Please type an adjective: exhausted
+Please type a city: Moscow
+Please type a religious group: Scientologists
+Please type an adjective: droopy
+Please type an emotion: excited
+Please type a number: 99999
+Please type a person's name: Barney the dinosaur
+Please type a place: the Chipotle men's room
+Please type a job title: CEO
+Please type an adjective: elastic
+Please type an area of study: CHID
+Your mad-lib has been created!
+
+(C)reate mad-lib, (V)iew mad-lib, (Q)uit? V
+Input file name: story2.txt
+
+Barack Obama has announced that his sleepy 
+clothing store in the heart of downtown Timbuktu is having 
+a/an lazy sale of all merchandise, including 
+fat suits and slightly irregular spleens 
+available. Men's cable-knit bazookas , only $15.99. 
+Hand-woven Italian Star Wars action figures , 1/2-price. Double- 
+breasted cashmere toilets , $50.00. Genuine imported 
+pink greasy shoes, itchy handerchiefs, 
+and women's embroidered laptops , all at rock-bottom prices. 
+This is a chance to get some really crappy bargains. 
+
+(C)reate mad-lib, (V)iew mad-lib, (Q)uit? v
+Input file name: results_3.txt
+File not found. Try again: result3.txt
+
+Ever since he was 75 , Marty has dreamed of being as moist 
+as his idol, David Hasselhoff . He thinks with great resentment 
+about having such picture-perfect kneecap (s) every day. 
+It's no wonder he buys his socks similar to 
+the one(s) seen in their films. 
+
+But he still looks way too exhausted that way, according to 
+most people in Moscow . In fact, the Scientologists have 
+filed several complaints about this droopy behavior. Someone 
+should break the news to him, but the risk of making him feel 
+excited is far too great. It could ruin his status as 
+the 99999 'th highest rated teacher in town. 
+(The highest-rated is, of course, Barney the dinosaur .) 
+
+Did you also know that Marty also spends most of his time 
+at the Chipotle men's room ? Perhaps he's hoping to be a CEO 
+when he grows up. It's a shame he will never reach 
+such a/an elastic position after having majored 
+in the field of CHID . 
+
+(C)reate mad-lib, (V)iew mad-lib, (Q)uit? q
+

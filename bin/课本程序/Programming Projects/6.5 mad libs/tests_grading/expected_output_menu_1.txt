@@ -1,0 +1,55 @@
+Welcome to the game of Mad Libs.
+I will ask you to provide various words
+and phrases to fill in a story.
+The result will be written to an output file.
+
+(C)reate mad-lib, (V)iew mad-lib, (Q)uit? x
+(C)reate mad-lib, (V)iew mad-lib, (Q)uit? y
+(C)reate mad-lib, (V)iew mad-lib, (Q)uit? z
+(C)reate mad-lib, (V)iew mad-lib, (Q)uit? huh?
+(C)reate mad-lib, (V)iew mad-lib, (Q)uit? test with many words
+(C)reate mad-lib, (V)iew mad-lib, (Q)uit? oops foo bar baz 12345
+(C)reate mad-lib, (V)iew mad-lib, (Q)uit? View
+(C)reate mad-lib, (V)iew mad-lib, (Q)uit? vIeW-mad-lib
+(C)reate mad-lib, (V)iew mad-lib, (Q)uit? V
+Input file name: out0.txt
+
+I wannabe a ballerina when I grow up. 
+Just like my dad. 
+Life is smelly like that! 
+
+(C)reate mad-lib, (V)iew mad-lib, (Q)uit? Create
+(C)reate mad-lib, (V)iew mad-lib, (Q)uit? C
+Input file name: madlib0.txt
+Output file name: menu_out_0.txt
+
+Please type a job: woookie
+Please type an adjective: chewie
+Your mad-lib has been created!
+
+(C)reate mad-lib, (V)iew mad-lib, (Q)uit? ?
+(C)reate mad-lib, (V)iew mad-lib, (Q)uit? C
+Input file name: madlib0_b.txt
+Output file name: menu_out_0_b.txt
+
+Please type a noun: chocolate
+Please type an adjective: soy
+Please type a subject: lactose-intolerance
+Your mad-lib has been created!
+
+(C)reate mad-lib, (V)iew mad-lib, (Q)uit? view
+(C)reate mad-lib, (V)iew mad-lib, (Q)uit? menu_out_0.txt
+(C)reate mad-lib, (V)iew mad-lib, (Q)uit? V
+Input file name: menu_out_0_b.txt
+
+The best kind of chocolate is a/an soy one. 
+That's what Mama always said. 
+And lactose-intolerance is her specialty! 
+
+(C)reate mad-lib, (V)iew mad-lib, (Q)uit? VV
+(C)reate mad-lib, (V)iew mad-lib, (Q)uit?        cV
+(C)reate mad-lib, (V)iew mad-lib, (Q)uit? out2.txt
+(C)reate mad-lib, (V)iew mad-lib, (Q)uit? Quit
+(C)reate mad-lib, (V)iew mad-lib, (Q)uit?   qQ
+(C)reate mad-lib, (V)iew mad-lib, (Q)uit? Q
+

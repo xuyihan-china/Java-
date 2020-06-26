@@ -1,0 +1,19 @@
+Welcome to the game of Mad Libs.
+I will ask you to provide various words
+and phrases to fill in a story.
+The result will be written to an output file.
+
+(C)reate mad-lib, (V)iew mad-lib, (Q)uit? c
+Input file name: madlib5.txt
+Output file name: out5.txt
+
+Please type a p lace h old er: b o o    y a h   1
+Please type a x: b o o    y a h   2
+Please type an e: b o o    y a h   3
+Please type a noun: b o o    y a h   4
+Please type an A: b o o    y a h   5
+Please type a Q: b o o    y a h   6
+Your mad-lib has been created!
+
+(C)reate mad-lib, (V)iew mad-lib, (Q)uit? q
+

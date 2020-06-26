@@ -1,0 +1,9 @@
+v
+OUT0001.txt
+i_forget
+huh?
+i-dont-know.txt
+out1.txt.not.found
+oops.out1.txt
+out1.txt
+q

@@ -1,0 +1,47 @@
+Welcome to the game of Mad Libs.
+I will ask you to provide various words
+and phrases to fill in a story.
+The result will be written to an output file.
+
+(C)reate mad-lib, (V)iew mad-lib, (Q)uit? c
+Input file name: oops.txt
+File not found. Try again: mabldib1.txt
+File not found. Try again: format-in.txt
+Output file name: format-out.txt
+
+Please type an adjective: silly
+Please type a plural noun: apples
+Please type a noun: frisbee
+Please type an adjective: hungry
+Please type a place: Tacoma, WA
+Please type a plural noun: bees
+Please type a noun: umbrella
+Please type a funny noise: burp
+Please type an adjective: shiny
+Please type a noun: jelly donut
+Please type an adjective: beautiful
+Please type a plural noun: spoons
+Please type a person's name: Keanu Reeves
+Your mad-lib has been created!
+
+(C)reate mad-lib, (V)iew mad-lib, (Q)uit? X
+(C)reate mad-lib, (V)iew mad-lib, (Q)uit? what?
+(C)reate mad-lib, (V)iew mad-lib, (Q)uit? v
+Input file name: OUT0001.txt
+File not found. Try again: i_forget
+File not found. Try again: format-out.txt
+
+One of the most silly characters in fiction is named 
+"Tarzan of the apples ." Tarzan was raised by a/an 
+frisbee and lives in the hungry jungle in the 
+heart of darkest Tacoma, WA . He spends most of his time 
+eating bees and swinging from tree to umbrella . 
+Whenever he gets angry, he beats on his chest and says, 
+" burp !" This is his war cry. Tarzan always dresses in 
+shiny shorts made from the skin of a/an jelly donut 
+and his best friend is a/an beautiful chimpanzee named 
+Cheetah. He is supposed to be able to speak to elephants and 
+spoons . In the movies, Tarzan is played by Keanu Reeves . 
+
+(C)reate mad-lib, (V)iew mad-lib, (Q)uit? q
+

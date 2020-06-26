@@ -1,0 +1,16 @@
+hasNext/next correct: 4 444 9 16 25 777 4 444 9 16 25 777 
+iterator(), listIterator(), correct: 4 444 9 16 25 777 16 25 777 444 9 16 25 777 
+nextIndex correct: 0:4 1:444 2:9 3:16 4:25 5:777 0:4 1:444 2:9 3:16 4:25 5:777 3:16 4:25 5:777 
+hasPrevious, previous attempt: 777 25 16 9 444 4 
+hasPrevious, previous correct: 9 444 4 777 25 16 9 444 4 
+previousIndex correct: 5:777 4:25 3:16 2:9 1:444 0:4 2:9 1:444 0:4 
+add forwards: [4, 99, 444, 99, 9, 99, 16, 11, 99, 11, 25, 11, 99, 11, 777, 11, 99]
+add backwards: [888, 4, 888, 99, 888, 444, 888, 99, 888, 9, 888, 99, 888, 16, 888, 11, 888, 99, 888, 11, 888, 25, 888, 11, 888, 99, 888, 11, 888, 777, 888, 11, 888, 99]
+set forwards: [0, 0, 9, 0, 25, 777]
+set backwards: [1001, 0, 0, 1009, 0, 1025, 1777]
+remove forwards: [4, 444, 16]
+remove backwards: [9, 25, 777]
+extra credit correct: pass pass pass pass pass pass pass pass pass 
+hasNext, next, nextIndex big-oh: probable pass
+hasPrevious, previous, previousIndex big-oh: probable pass
+add, remove, set big-oh: probable pass
